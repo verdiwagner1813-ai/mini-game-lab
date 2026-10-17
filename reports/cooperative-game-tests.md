@@ -35,3 +35,6 @@ PLAYWRIGHT_MODULE=/path/to/playwright-core CHROMIUM_PATH=/path/to/chromium node 
 
 ## 配布パッケージ検査（親実施）
 配布HTMLとZIP内のHTMLを検証済み本体とバイト比較して一致。ZIP整合検査も合格。元ゲームは410b0dbと完全一致。downloads/ のSHA-256一覧を追加。GitHubからのダウンロード後も照合する。
+
+## GitHub配布の最終確認
+PR #2をmainへマージ済み（37ca3ef）。GitHub main上の配布URLからHTMLとZIPを実際に取得し、ローカルの検証済み本体・ZIPとバイト単位で一致すること、取得ZIPの展開内容と整合性を確認して合格。ZIPはapplication/zipで配信。これは配布ファイル取得の確認であり、ゲームのHTTPS配信での実ブラウザ動作確認とは区別する。
