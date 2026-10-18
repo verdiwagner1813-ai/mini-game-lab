@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "status": "REGISTERED_AWAITING_EXECUTION",
+  "createdUtc": "2026-10-18T10:34:23.668441+00:00",
+  "automationId": "6ad4a0af1dcc8191aa473567b07c31f0",
+  "schedule": "BEGIN:VEVENT\nDTSTART:20261018T103523Z\nEND:VEVENT",
+  "timezone": "Asia/Tokyo",
+  "runId": "scheduled-v11-20261018-a",
+  "repository": "verdiwagner1813-ai/mini-game-lab",
+  "codeCommit": "4128adec88b7f726d07c6e8fd140ab2b9d3c3691",
+  "threeRunExperimentEnabled": false,
+  "requiresNewApprovalForThreeRuns": true,
+  "usageCostKnown": false,
+  "additionalApiKeysConfigured": false,
+  "extraBillingConfigured": false,
+  "environmentBeforeRun": "ccarenv_b64_Y2NhcmVudl9lYTM2ZmViYjExNDg4MTkxOWQzNDQ2MTkxZmE4YzdkMw",
+  "coldRestartTested": false
+}
