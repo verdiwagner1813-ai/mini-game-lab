@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "policyStatus": "CURRENT",
+  "supersedes": "engine-v1.1/experiment-plan.json",
+  "reason": "Latest user instruction after usage-limit reset requires approval before enabling the three-run schedule",
+  "repository": "verdiwagner1813-ai/mini-game-lab",
+  "branch": "main",
+  "game_id": "exhibit-mission",
+  "one_shot": {"authorized": true, "registered": false, "scope": "One scheduled end-to-end test requested in the original v1.1 task; never activate remaining trials"},
+  "three_run_experiment": {
+    "enabled": false,
+    "registered": false,
+    "requires_new_explicit_user_confirmation": true,
+    "interval_hours": 2,
+    "count": 3,
+    "activation_prerequisite": "actual scheduled first-trial success AND new user approval",
+    "schedule_template": "BEGIN:VEVENT\nDTSTART:<approved future start in Asia/Tokyo>\nRRULE:FREQ=HOURLY;INTERVAL=2;COUNT=3\nEND:VEVENT"
+  },
+  "additional_api_keys_allowed": false,
+  "extra_billing_allowed": false,
+  "usageCostKnown": false,
+  "hard_cloud_task_termination_guaranteed": false,
+  "target_max_seconds_per_run": 3600
+}

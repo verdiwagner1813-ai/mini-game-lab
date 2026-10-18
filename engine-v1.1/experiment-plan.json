@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "engine": "mini-game-improvement-engine-v1.1",
+  "repository": "verdiwagner1813-ai/mini-game-lab",
+  "branch": "main",
+  "game_id": "exhibit-mission",
+  "execution_method": "existing Codex scheduled task and live independent-AI bridge",
+  "one_shot": {
+    "state": "AUTHORIZED_NOT_YET_REGISTERED",
+    "expected_success": "actual AI improvement plus all tests pass plus GitHub readback; registration alone is not success"
+  },
+  "three_run_experiment": {
+    "enabled": false,
+    "requires_explicit_user_confirmation": false,
+    "prerequisite": "one-shot actual scheduled improvement, browser tests, and GitHub saving all verified",
+    "interval_hours": 2,
+    "count": 3,
+    "schedule_template": "BEGIN:VEVENT\nDTSTART:<first future time in confirmed personal timezone>\nRRULE:FREQ=HOURLY;INTERVAL=2;COUNT=3\nEND:VEVENT",
+    "schedule_registered": false,
+    "run_id_policy": "scheduled-<UTC timestamp>-<unique suffix>",
+    "overlap_policy": "one game at a time; abort if latest accepted source changed",
+    "user_confirmation": "2026-10-18 user: ３回試験して",
+    "total_authorized_trials": 3,
+    "activation_policy": "first run then remaining two at two-hour intervals only after first actual success"
+  },
+  "limits": {
+    "target_max_seconds_per_run": 3600,
+    "max_repair_attempts": 3,
+    "hard_cloud_task_termination_guaranteed": false,
+    "additional_api_keys_configured": false,
+    "extra_billing_configured": false,
+    "usage_cost_known": false,
+    "usage_quota_known": false
+  }
+}
