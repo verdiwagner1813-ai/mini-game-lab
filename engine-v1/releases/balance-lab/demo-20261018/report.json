@@ -1,0 +1,95 @@
+{
+  "engine": "mini-game-improvement-engine-v1",
+  "program_is_ai": false,
+  "ai_protocol": "Independent AI edits candidate; program runs checks only.",
+  "started_utc": "2026-10-18T10:15:07.929882+00:00",
+  "attempts": [
+    {
+      "attempt": 0,
+      "tests": [
+        {
+          "id": "common-static",
+          "command": [
+            "node",
+            "/workspace/work/mini-game-engine-v1-20261018/engine-v1/tests/common-static.cjs",
+            "/workspace/work/engine-v1-live-runs/balance-lab/demo-20261018/candidate.html",
+            "/workspace/work/mini-game-engine-v1-20261018/engine-v1/games/balance-lab.json"
+          ],
+          "exit_code": 0,
+          "seconds": 0.032,
+          "status": "PASS",
+          "log": "/workspace/work/engine-v1-live-runs/balance-lab/demo-20261018/attempt-0-test-0.log",
+          "output": "{\"pass\":true,\"sourceSha256\":\"4aa1103e4f98fd0cd570071d1ece90e376e7e67597bf980625fd16742f9de8c5\",\"inlineScripts\":1,\"utf8\":true,\"externalDependencies\":false,\"platform\":\"static Node\",\"fileProtocol\":\"not tested; prior environment policy blocked file://\"}\n\n"
+        },
+        {
+          "id": "common-browser",
+          "command": [
+            "node",
+            "/workspace/work/mini-game-engine-v1-20261018/engine-v1/tests/common-browser.cjs",
+            "/workspace/work/engine-v1-live-runs/balance-lab/demo-20261018/candidate.html",
+            "/workspace/work/mini-game-engine-v1-20261018/engine-v1/games/balance-lab.json"
+          ],
+          "exit_code": 0,
+          "seconds": 1.918,
+          "status": "PASS",
+          "log": "/workspace/work/engine-v1-live-runs/balance-lab/demo-20261018/attempt-0-test-1.log",
+          "output": "{\"pass\":true,\"sourceSha256\":\"4aa1103e4f98fd0cd570071d1ece90e376e7e67597bf980625fd16742f9de8c5\",\"platform\":\"Linux Chromium HTTP loopback\",\"results\":[{\"viewport\":{\"width\":1366,\"height\":768},\"touch\":false,\"pageErrors\":0,\"externalRequests\":0,\"horizontalOverflow\":false},{\"viewport\":{\"width\":768,\"height\":1024},\"touch\":true,\"pageErrors\":0,\"externalRequests\":0,\"horizontalOverflow\":false},{\"viewport\":{\"width\":360,\"height\":800},\"touch\":true,\"pageErrors\":0,\"externalRequests\":0,\"horizontalOverflow\":false}],\"fileProtocol\":\"not tested; prior environment policy blocked file://\",\"realWindowsChromebook\":false}\n\n"
+        },
+        {
+          "id": "balance-independent-full",
+          "command": [
+            "node",
+            "engine-v1/tests/balance-specific.cjs",
+            "/workspace/work/engine-v1-live-runs/balance-lab/demo-20261018/candidate.html"
+          ],
+          "exit_code": 0,
+          "seconds": 1.555,
+          "status": "PASS",
+          "log": "/workspace/work/engine-v1-live-runs/balance-lab/demo-20261018/attempt-0-test-2.log",
+          "output": "{\"pass\":true,\"sourceSha256\":\"4aa1103e4f98fd0cd570071d1ece90e376e7e67597bf980625fd16742f9de8c5\",\"specific\":\"balance-lab\",\"sumIndependent\":true,\"allFiveVariantsSolvable\":true,\"solutions\":6,\"threeRounds\":true,\"hint\":true,\"passRoute\":true,\"replayChanges\":true,\"resetViaReload\":true,\"roles\":[\"重り1：1番さんの目安 ／ 重り2：2番さんの目安 ／ 重り3：3番さんの目安\",\"重り1：2番さんの目安 ／ 重り2：3番さんの目安 ／ 重り3：1番さんの目安\",\"重り1：3番さんの目安 ／ 重り2：1番さんの目安 ／ 重り3：2番さんの目安\"]}\n\n"
+        },
+        {
+          "id": "balance-placement",
+          "command": [
+            "node",
+            "engine-v1/tests/improvement-specific.cjs",
+            "/workspace/work/engine-v1-live-runs/balance-lab/demo-20261018/candidate.html",
+            "balance-placement"
+          ],
+          "exit_code": 0,
+          "seconds": 1.228,
+          "status": "PASS",
+          "log": "/workspace/work/engine-v1-live-runs/balance-lab/demo-20261018/attempt-0-test-3.log",
+          "output": "{\"pass\":true,\"sourceSha256\":\"4aa1103e4f98fd0cd570071d1ece90e376e7e67597bf980625fd16742f9de8c5\",\"specific\":\"balance-placement\"}\n\n"
+        }
+      ],
+      "status": "PASS",
+      "ai_acknowledgement": {
+        "ready": true,
+        "ai_agent": "/root/child_view",
+        "summary": "未配置の重りが残る間は『未配置 あとN個』と『配置途中』を表示。全配置後は『3個配置済み』へ切替し、釣り合いと完成を混同しにくくする。合計・判定・基本ルールは維持、効果は未検証の仮説。"
+      },
+      "candidate_sha256": "4aa1103e4f98fd0cd570071d1ece90e376e7e67597bf980625fd16742f9de8c5"
+    }
+  ],
+  "status": "LOCAL_PASS_AWAITING_GITHUB",
+  "github_status": "NOT_SENT_BY_ENGINE",
+  "game_id": "balance-lab",
+  "run_id": "demo-20261018",
+  "source": "engine-v1/samples/balance-lab/original.html",
+  "source_sha256": "f4cb8e4667020dca909b541cd0a952d3a0703080462286ceec62f023ff7bbeaa",
+  "config_sha256": "0c46f2a66f1db11b69536dedce46944348530f99fb27e5045bed06ed3f1ec185",
+  "work_directory": "/workspace/work/engine-v1-live-runs/balance-lab/demo-20261018",
+  "max_evaluations": 4,
+  "timeout_seconds": 3600,
+  "validated_sha256": "4aa1103e4f98fd0cd570071d1ece90e376e7e67597bf980625fd16742f9de8c5",
+  "release_directory": "engine-v1/releases/balance-lab/demo-20261018",
+  "finished_utc": "2026-10-18T10:15:45.568553+00:00",
+  "protected_files": 47,
+  "source_and_history_unchanged": true,
+  "limitations": [
+    "Automated checks do not establish real-child usability.",
+    "AI identity is supplied by bridge, not cryptographically verified.",
+    "GitHub upload/main merge is a separate operation."
+  ]
+}

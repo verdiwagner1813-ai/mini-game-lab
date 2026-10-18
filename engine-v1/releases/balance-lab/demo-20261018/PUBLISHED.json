@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "status": "GITHUB_PUBLISHED",
+  "game_id": "balance-lab",
+  "run_id": "demo-20261018",
+  "game_sha256": "4aa1103e4f98fd0cd570071d1ece90e376e7e67597bf980625fd16742f9de8c5",
+  "report_sha256": "cab8402156ede58a91cc6da26f053e092fbf15e6c6f5cd167c1d291dcda9b5a7",
+  "parent_main": "2499dbea4064fe7dd01d473ca4ec3a63bbc82da5",
+  "published_utc": "2026-10-18T10:15:46.475802+00:00",
+  "policy": "new files only; no force; release and receipt in one Git commit"
+}
