@@ -1,0 +1,8 @@
+{
+  "status": "GITHUB_RECORDED",
+  "game_id": "exhibit-mission",
+  "run_id": "scheduled-v11-20261018-a",
+  "record_sha256": "a71f43a24535004b565e8c1499713d94d491795193678177c6e86b909e95f4b8",
+  "parent_main": "a859a28ac0a54072f9b2f11184512c9c2a141d32",
+  "policy": "two new files only; no force; read-back verification"
+}

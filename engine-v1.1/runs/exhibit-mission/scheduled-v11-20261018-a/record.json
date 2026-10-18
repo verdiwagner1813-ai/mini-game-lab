@@ -1,0 +1,132 @@
+{
+  "schema_version": "1.1",
+  "engine": "mini-game-continuity-wrapper",
+  "program_is_ai": false,
+  "game_id": "exhibit-mission",
+  "run_id": "scheduled-v11-20261018-a",
+  "invocation": "scheduled",
+  "invocation_evidence": "Self-declared metadata only; match external schedule ID/time separately.",
+  "status": "PASS",
+  "github_status": "GITHUB_PUBLISHED",
+  "started_utc": "2026-10-18T10:36:00.569283+00:00",
+  "ai_decisions": [
+    {
+      "ready": true,
+      "summary": "3案（対象強調の可視ラベル、相談手順の常設、選択取消後のフォーカス復元）を比較し、キーボードで操作位置を見失いにくくするフォーカス復元を選定。指定候補HTMLの取消処理だけ変更し、取消前の作品ボタンへフォーカスを戻す。推理・画面配置・undo・対象強調・通信なしを維持。実児童効果は推定。",
+      "ai_agent": "/root/child_view"
+    }
+  ],
+  "scope": "Automated checks; no real-child or Windows/Chromebook hardware verification.",
+  "work_directory": "/workspace/work/v11-scheduled-20261018-a.IFb7Wh/runs/continuity/exhibit-mission/scheduled-v11-20261018-a",
+  "source": {
+    "kind": "release",
+    "path": "engine-v1/releases/exhibit-mission/demo-20261018/game.html",
+    "release": "engine-v1/releases/exhibit-mission/demo-20261018",
+    "sha256": "b26475b85175dcc89c0076169f15065963912f35ea994ede1e78dee83f7298fa",
+    "commit": "0d507bc470a0b6f3bdff2d55789ed49f2a6ad3a9",
+    "config_sha256": "ad3bf7a296ab7eb22f54ddc942496612129ceeb5ec6dab3532747b9f40edff92",
+    "ref_commit": "0516ec834f9edd67abb1a7d960f396d7736da64d",
+    "game_id": "exhibit-mission"
+  },
+  "sandbox_seed": {
+    "source_path": "experiments/exhibit-seven-days/day-02-final/game.html",
+    "sha256": "b26475b85175dcc89c0076169f15065963912f35ea994ede1e78dee83f7298fa",
+    "config_unchanged": true,
+    "note": "Only isolated working-copy source bytes replaced; authoritative original is unchanged."
+  },
+  "v1_status": "LOCAL_PASS_AWAITING_GITHUB",
+  "attempts": [
+    {
+      "attempt": 0,
+      "tests": [
+        {
+          "id": "common-static",
+          "command": [
+            "node",
+            "/workspace/work/v11-scheduled-20261018-a.IFb7Wh/runs/continuity/exhibit-mission/scheduled-v11-20261018-a/checkout/engine-v1/tests/common-static.cjs",
+            "/workspace/work/v11-scheduled-20261018-a.IFb7Wh/runs/continuity/exhibit-mission/scheduled-v11-20261018-a/v1-work/exhibit-mission/scheduled-v11-20261018-a/candidate.html",
+            "/workspace/work/v11-scheduled-20261018-a.IFb7Wh/runs/continuity/exhibit-mission/scheduled-v11-20261018-a/checkout/engine-v1/games/exhibit-mission.json"
+          ],
+          "exit_code": 0,
+          "seconds": 0.04,
+          "status": "PASS",
+          "log": "/workspace/work/v11-scheduled-20261018-a.IFb7Wh/runs/continuity/exhibit-mission/scheduled-v11-20261018-a/v1-work/exhibit-mission/scheduled-v11-20261018-a/attempt-0-test-0.log",
+          "output": "{\"pass\":true,\"sourceSha256\":\"cd84365d2ccfa0213e92b8e7d4412f614b71741ea4666233472f4e1f9389a9b1\",\"inlineScripts\":1,\"utf8\":true,\"externalDependencies\":false,\"platform\":\"static Node\",\"fileProtocol\":\"not tested; prior environment policy blocked file://\"}\n\n"
+        },
+        {
+          "id": "common-browser",
+          "command": [
+            "node",
+            "/workspace/work/v11-scheduled-20261018-a.IFb7Wh/runs/continuity/exhibit-mission/scheduled-v11-20261018-a/checkout/engine-v1/tests/common-browser.cjs",
+            "/workspace/work/v11-scheduled-20261018-a.IFb7Wh/runs/continuity/exhibit-mission/scheduled-v11-20261018-a/v1-work/exhibit-mission/scheduled-v11-20261018-a/candidate.html",
+            "/workspace/work/v11-scheduled-20261018-a.IFb7Wh/runs/continuity/exhibit-mission/scheduled-v11-20261018-a/checkout/engine-v1/games/exhibit-mission.json"
+          ],
+          "exit_code": 0,
+          "seconds": 2.092,
+          "status": "PASS",
+          "log": "/workspace/work/v11-scheduled-20261018-a.IFb7Wh/runs/continuity/exhibit-mission/scheduled-v11-20261018-a/v1-work/exhibit-mission/scheduled-v11-20261018-a/attempt-0-test-1.log",
+          "output": "{\"pass\":true,\"sourceSha256\":\"cd84365d2ccfa0213e92b8e7d4412f614b71741ea4666233472f4e1f9389a9b1\",\"platform\":\"Linux Chromium HTTP loopback\",\"results\":[{\"viewport\":{\"width\":1366,\"height\":768},\"touch\":false,\"pageErrors\":0,\"externalRequests\":0,\"horizontalOverflow\":false},{\"viewport\":{\"width\":768,\"height\":1024},\"touch\":true,\"pageErrors\":0,\"externalRequests\":0,\"horizontalOverflow\":false},{\"viewport\":{\"width\":360,\"height\":800},\"touch\":true,\"pageErrors\":0,\"externalRequests\":0,\"horizontalOverflow\":false}],\"fileProtocol\":\"not tested; prior environment policy blocked file://\",\"realWindowsChromebook\":false}\n\n"
+        },
+        {
+          "id": "exhibit-independent-logic",
+          "command": [
+            "node",
+            "tests/day2-acceptance-logic.cjs",
+            "/workspace/work/v11-scheduled-20261018-a.IFb7Wh/runs/continuity/exhibit-mission/scheduled-v11-20261018-a/v1-work/exhibit-mission/scheduled-v11-20261018-a/candidate.html"
+          ],
+          "exit_code": 0,
+          "seconds": 1.726,
+          "status": "PASS",
+          "log": "/workspace/work/v11-scheduled-20261018-a.IFb7Wh/runs/continuity/exhibit-mission/scheduled-v11-20261018-a/v1-work/exhibit-mission/scheduled-v11-20261018-a/attempt-0-test-2.log",
+          "output": "{\"source\":\"/workspace/work/v11-scheduled-20261018-a.IFb7Wh/runs/continuity/exhibit-mission/scheduled-v11-20261018-a/v1-work/exhibit-mission/scheduled-v11-20261018-a/candidate.html\",\"sha256\":\"cd84365d2ccfa0213e92b8e7d4412f614b71741ea4666233472f4e1f9389a9b1\"}\n{\"pass\":true,\"samples\":2400,\"seed\":\"0x20261018\",\"solutionsCovered\":24,\"candidatesPerPuzzle\":24,\"allCluesEssential\":true,\"externalDependencies\":false}\n{\"finiteUniverse\":true,\"clueTypes\":32,\"allTriples\":4960,\"eligibleEssentialUniqueTriples\":168,\"solutionsCovered\":24}\n\n"
+        },
+        {
+          "id": "exhibit-full-browser",
+          "command": [
+            "node",
+            "tests/day2-acceptance-browser.cjs",
+            "/workspace/work/v11-scheduled-20261018-a.IFb7Wh/runs/continuity/exhibit-mission/scheduled-v11-20261018-a/v1-work/exhibit-mission/scheduled-v11-20261018-a/candidate.html"
+          ],
+          "exit_code": 0,
+          "seconds": 3.595,
+          "status": "PASS",
+          "log": "/workspace/work/v11-scheduled-20261018-a.IFb7Wh/runs/continuity/exhibit-mission/scheduled-v11-20261018-a/v1-work/exhibit-mission/scheduled-v11-20261018-a/attempt-0-test-3.log",
+          "output": "{\"source\":\"/workspace/work/v11-scheduled-20261018-a.IFb7Wh/runs/continuity/exhibit-mission/scheduled-v11-20261018-a/v1-work/exhibit-mission/scheduled-v11-20261018-a/candidate.html\",\"sha256\":\"cd84365d2ccfa0213e92b8e7d4412f614b71741ea4666233472f4e1f9389a9b1\"}\n{\"pass\":true,\"platform\":\"Linux Chromium via localhost HTTP\",\"roles\":[\"操作の目安：1番さん。担当は共同でも、交代・パスでも大丈夫。まず1枚に合うように並べる → 残り2枚も見る → 確かめる。「より左」は、となりでなくてもOKです。\",\"操作の目安：2番さん。担当は共同でも、交代・パスでも大丈夫。\",\"操作の目安：3番さん。担当は共同でも、交代・パスでも大丈夫。\"],\"errors\":[],\"external\":[],\"responsive\":[{\"viewport\":{\"width\":768,\"height\":1024},\"touch\":true,\"overflow\":false},{\"viewport\":{\"width\":360,\"height\":800},\"touch\":true,\"overflow\":false}],\"keyboard\":true,\"wrongAnswer\":true,\"hints\":true,\"pause\":true,\"reset\":true,\"replayChanges\":true,\"undoTested\":true}\n\n"
+        },
+        {
+          "id": "exhibit-highlight",
+          "command": [
+            "node",
+            "engine-v1/tests/improvement-specific.cjs",
+            "/workspace/work/v11-scheduled-20261018-a.IFb7Wh/runs/continuity/exhibit-mission/scheduled-v11-20261018-a/v1-work/exhibit-mission/scheduled-v11-20261018-a/candidate.html",
+            "exhibit-highlight"
+          ],
+          "exit_code": 0,
+          "seconds": 1.481,
+          "status": "PASS",
+          "log": "/workspace/work/v11-scheduled-20261018-a.IFb7Wh/runs/continuity/exhibit-mission/scheduled-v11-20261018-a/v1-work/exhibit-mission/scheduled-v11-20261018-a/attempt-0-test-4.log",
+          "output": "{\"pass\":true,\"sourceSha256\":\"cd84365d2ccfa0213e92b8e7d4412f614b71741ea4666233472f4e1f9389a9b1\",\"specific\":\"exhibit-highlight\"}\n\n"
+        }
+      ],
+      "status": "PASS",
+      "ai_acknowledgement": {
+        "ready": true,
+        "summary": "3案（対象強調の可視ラベル、相談手順の常設、選択取消後のフォーカス復元）を比較し、キーボードで操作位置を見失いにくくするフォーカス復元を選定。指定候補HTMLの取消処理だけ変更し、取消前の作品ボタンへフォーカスを戻す。推理・画面配置・undo・対象強調・通信なしを維持。実児童効果は推定。",
+        "ai_agent": "/root/child_view"
+      },
+      "candidate_sha256": "cd84365d2ccfa0213e92b8e7d4412f614b71741ea4666233472f4e1f9389a9b1"
+    }
+  ],
+  "release_created": true,
+  "release": "engine-v1/releases/exhibit-mission/scheduled-v11-20261018-a",
+  "validated_sha256": "cd84365d2ccfa0213e92b8e7d4412f614b71741ea4666233472f4e1f9389a9b1",
+  "local_status": "LOCAL_PASS_AWAITING_GITHUB",
+  "release_publication": {
+    "status": "GITHUB_PUBLISHED",
+    "commit": "a859a28ac0a54072f9b2f11184512c9c2a141d32",
+    "readback_verified": true,
+    "release": "engine-v1/releases/exhibit-mission/scheduled-v11-20261018-a"
+  },
+  "finished_utc": "2026-10-18T10:37:12.938473+00:00",
+  "elapsed_seconds": 72.369
+}
