@@ -1,0 +1,74 @@
+{
+  "date": "2026-10-18",
+  "status": "PASS",
+  "sourceCommit": "c7b7cbaec61014be14af8e32f1f501ad36c32da6",
+  "scheduledPromptReceived": true,
+  "scope": "One-shot capability probe only; no game changes and no daily improvement schedule created.",
+  "capabilities": {
+    "shell": true,
+    "writableTemporaryWorkspace": true,
+    "node": true,
+    "browser": true,
+    "githubRead": true,
+    "githubWrite": true
+  },
+  "environment": {
+    "environmentId": "ccarenv_b64_Y2NhcmVudl9lYTM2ZmViYjExNDg4MTkxOWQzNDQ2MTkxZmE4YzdkMw",
+    "current": true,
+    "connectivity": "connected",
+    "node": "v24.19.0",
+    "chromium": "154.0.8037.57",
+    "platform": "Linux",
+    "freshCheckout": true,
+    "checkout": "/workspace/work/exhibit-cloud-probe-20261018"
+  },
+  "tests": [
+    {
+      "name": "Read repository, game HTML, logic test and browser test through GitHub connector",
+      "status": "PASS"
+    },
+    {
+      "name": "Fresh clone main and check source working tree unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "Logic",
+      "status": "PASS",
+      "generatedSamples": 2400,
+      "arrangements": 24,
+      "finiteClueTriples": 4960,
+      "eligibleTriples": 168
+    },
+    {
+      "name": "HTTP Chromium interaction",
+      "status": "PASS",
+      "keyboard": true,
+      "mouse": true,
+      "touchEmulation": true,
+      "viewports": [
+        "1366x768",
+        "768x1024",
+        "360x800"
+      ],
+      "wrongAnswer": true,
+      "hints": true,
+      "pause": true,
+      "reset": true,
+      "replayChanges": true,
+      "pageErrors": 0,
+      "externalRequests": 0
+    }
+  ],
+  "blockedReason": null,
+  "usageCostKnown": false,
+  "apiKeysOrPaidServicesConfigured": false,
+  "publicSettingsChanged": false,
+  "caveats": [
+    "Browser launch used an execution permission escalation approved by automatic review; future runs may be blocked by a different permission policy.",
+    "The cloud environment ID matched the already attached environment. Cold-start reattachment after the current environment stops has not been tested.",
+    "GitHub write success applies to this new result file; no game files were modified.",
+    "No test of school Chromebook, Windows hardware, HTTPS game hosting, or child participants.",
+    "No 60-minute hard cap or account spending/usage quota was verified.",
+    "Immediate automation run endpoint returned Action not found; the scheduled one-shot prompt was received instead."
+  ]
+}
