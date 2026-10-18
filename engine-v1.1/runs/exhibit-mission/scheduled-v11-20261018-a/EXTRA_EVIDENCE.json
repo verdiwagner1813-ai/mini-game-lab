@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "status": "PASS",
+  "scheduledInvocationCorroborated": true,
+  "automationId": "6ad4a0af1dcc8191aa473567b07c31f0",
+  "scheduledAtUtc": "2026-10-18T10:35:23Z",
+  "observedLastRunTimeUtc": "2026-10-18T10:35:21.800446+00:00",
+  "automationEnabledAfterInvocation": false,
+  "runId": "scheduled-v11-20261018-a",
+  "codeCommit": "4128adec88b7f726d07c6e8fd140ab2b9d3c3691",
+  "inputMainCommit": "0516ec834f9edd67abb1a7d960f396d7736da64d",
+  "releaseCommit": "a859a28ac0a54072f9b2f11184512c9c2a141d32",
+  "runRecordCommit": "5d3bdf1efd14260639ba0c11f880cee52e1193b2",
+  "sourceSha256": "b26475b85175dcc89c0076169f15065963912f35ea994ede1e78dee83f7298fa",
+  "sha256": "cd84365d2ccfa0213e92b8e7d4412f614b71741ea4666233472f4e1f9389a9b1",
+  "elapsedSeconds": 72.369,
+  "capabilities": {
+    "shell": true,
+    "writableFreshWorkspace": true,
+    "node": true,
+    "chromiumPlaywright": true,
+    "githubRead": true,
+    "githubWrite": true
+  },
+  "environmentId": "ccarenv_b64_Y2NhcmVudl9lYTM2ZmViYjExNDg4MTkxOWQzNDQ2MTkxZmE4YzdkMw",
+  "coldRestartVerified": false,
+  "sameAttachedEnvironment": true,
+  "browserPlatform": "Linux Chromium localhost HTTP",
+  "existingGameChecks": 5,
+  "allExistingGameChecksPass": true,
+  "extraBrowserTest": {
+    "independentAgent": "/root/testing",
+    "pass": true,
+    "viewports": [
+      "1366x768",
+      "360x800 touch emulation"
+    ],
+    "checks": [
+      "cancel by click/tap/Enter restores focus to original slot",
+      "selected is null",
+      "order/undo history/activeClue/hintLevel/solved unchanged",
+      "undo focuses check",
+      "hint and solved-state controls preserved"
+    ],
+    "cases": 4,
+    "pageErrors": [],
+    "candidateUnchanged": true,
+    "scriptSha256": "ab14997882f0a8d615ef93e3e72c04a16031ea67bbd8e7e5d4698a1b376a6d59",
+    "scriptNote": "Exact executed scratch-script snapshot, including original temporary candidate path; adjust path in a new local copy to reproduce elsewhere."
+  },
+  "comparison": {
+    "oldFocus": "#clearSelection",
+    "newFocus": "[data-slot=\"1\"]",
+    "oldBehaviorObservedNotReportedAsTestFailure": true
+  },
+  "readbackVerified": true,
+  "zipVerified": true,
+  "unchangedPreTrialFiles": 68,
+  "nextLatestSourceIsNewRelease": true,
+  "threeRunExperimentEnabled": false,
+  "newApprovalRequiredForRecurringTrials": true,
+  "additionalApiKeysConfigured": false,
+  "extraBillingConfigured": false,
+  "usageCostKnown": false,
+  "hardCloudTaskTerminationGuaranteed": false,
+  "unverified": [
+    "cold restart after cloud environment stop",
+    "future authentication and usage quota",
+    "school Chromebook/Windows hardware",
+    "real touch hardware",
+    "file protocol",
+    "HTTPS hosting",
+    "real-child educational effects"
+  ]
+}
