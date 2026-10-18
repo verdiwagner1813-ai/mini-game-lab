@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "day": 2,
+  "status": "PASS",
+  "sourceCommit": "c4f5e5a8a73cf7e063d47d1f039e7880ff2f45a1",
+  "sourcePreview": "experiments/exhibit-seven-days/day02-undo-preview.html",
+  "sourcePreviewSha256": "58a5712d85ea74e16d5ef045b31d6710248a4a47af6725150e2c3451d8cbd28f",
+  "gamePath": "experiments/exhibit-seven-days/day-02-final/game.html",
+  "sha256": "e1f0bee3775577894eac5d2591d7d0b89d01cb5df94676f7e95d4de8dafdbc8c",
+  "changes": [
+    "Complete/example/reset clear undo history",
+    "Undo returns keyboard focus to check button"
+  ],
+  "tests": {
+    "logic": {
+      "pass": true,
+      "generatedProblems": 2400,
+      "finiteTriples": 4960,
+      "solutions": 24
+    },
+    "browser": {
+      "pass": true,
+      "platform": "Linux Chromium localhost HTTP",
+      "undoTested": true,
+      "keyboard": true,
+      "mouse": true,
+      "touchEmulation": true,
+      "viewports": [
+        "1366x768",
+        "768x1024",
+        "360x800"
+      ],
+      "errors": [],
+      "externalRequests": []
+    },
+    "previewRegression": {
+      "status": "FAIL",
+      "reproduced": "undo must return focus to check"
+    },
+    "baselineRegression": {
+      "pass": true
+    }
+  },
+  "untested": [
+    "School Chromebook/Windows hardware",
+    "Real touch hardware",
+    "file:// blocked by managed environment in previous test",
+    "Child participants and actual play duration"
+  ],
+  "originalsPreserved": true
+}
