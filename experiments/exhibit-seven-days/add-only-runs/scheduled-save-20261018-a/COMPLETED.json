@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "status": "PASS",
+  "runId": "scheduled-save-20261018-a",
+  "sourceCommit": "edaa6845a79fe0c34fb4044e2f5b1ef44b029dbe",
+  "gamePath": "experiments/exhibit-seven-days/add-only-runs/scheduled-save-20261018-a/game.html",
+  "sha256": "e1f0bee3775577894eac5d2591d7d0b89d01cb5df94676f7e95d4de8dafdbc8c",
+  "scheduledInvocation": true,
+  "evidence": {
+    "testedSha256": "e1f0bee3775577894eac5d2591d7d0b89d01cb5df94676f7e95d4de8dafdbc8c",
+    "logic": {
+      "pass": true,
+      "generatedProblems": 2400,
+      "finiteTriples": 4960
+    },
+    "browser": {
+      "pass": true,
+      "undoTested": true,
+      "platform": "Linux Chromium localhost HTTP",
+      "errors": [],
+      "externalRequests": [],
+      "keyboard": true,
+      "mouse": true,
+      "touchEmulation": true,
+      "viewports": [
+        "1366x768",
+        "768x1024",
+        "360x800"
+      ]
+    },
+    "publisher": {
+      "pass": true,
+      "checks": 8
+    }
+  },
+  "additionalApiKeysConfigured": false,
+  "extraBillingConfigured": false,
+  "usageCostKnown": false,
+  "executionPermission": "Automatically reviewed execution escalation was granted for browser test",
+  "limits": [
+    "Same attached cloud environment was available; cold-start reattachment not tested",
+    "School devices and child participants untested",
+    "No recurring schedule created"
+  ]
+}
