@@ -1,0 +1,174 @@
+{
+  "engine": "mini-game-improvement-engine-v1",
+  "program_is_ai": false,
+  "ai_protocol": "Independent AI edits candidate; program runs checks only.",
+  "started_utc": "2026-10-18T10:14:18.870778+00:00",
+  "attempts": [
+    {
+      "attempt": 0,
+      "tests": [
+        {
+          "id": "common-static",
+          "command": [
+            "node",
+            "/workspace/work/mini-game-engine-v1-20261018/engine-v1/tests/common-static.cjs",
+            "/workspace/work/engine-v1-live-runs/exhibit-mission/demo-20261018/candidate.html",
+            "/workspace/work/mini-game-engine-v1-20261018/engine-v1/games/exhibit-mission.json"
+          ],
+          "exit_code": 0,
+          "seconds": 0.037,
+          "status": "PASS",
+          "log": "/workspace/work/engine-v1-live-runs/exhibit-mission/demo-20261018/attempt-0-test-0.log",
+          "output": "{\"pass\":true,\"sourceSha256\":\"eda12943f6d148ef0ca6aa79fc89251835b61c8588841e811b3b33ded4b064e2\",\"inlineScripts\":1,\"utf8\":true,\"externalDependencies\":false,\"platform\":\"static Node\",\"fileProtocol\":\"not tested; prior environment policy blocked file://\"}\n\n"
+        },
+        {
+          "id": "common-browser",
+          "command": [
+            "node",
+            "/workspace/work/mini-game-engine-v1-20261018/engine-v1/tests/common-browser.cjs",
+            "/workspace/work/engine-v1-live-runs/exhibit-mission/demo-20261018/candidate.html",
+            "/workspace/work/mini-game-engine-v1-20261018/engine-v1/games/exhibit-mission.json"
+          ],
+          "exit_code": 0,
+          "seconds": 2.193,
+          "status": "PASS",
+          "log": "/workspace/work/engine-v1-live-runs/exhibit-mission/demo-20261018/attempt-0-test-1.log",
+          "output": "{\"pass\":true,\"sourceSha256\":\"eda12943f6d148ef0ca6aa79fc89251835b61c8588841e811b3b33ded4b064e2\",\"platform\":\"Linux Chromium HTTP loopback\",\"results\":[{\"viewport\":{\"width\":1366,\"height\":768},\"touch\":false,\"pageErrors\":0,\"externalRequests\":0,\"horizontalOverflow\":false},{\"viewport\":{\"width\":768,\"height\":1024},\"touch\":true,\"pageErrors\":0,\"externalRequests\":0,\"horizontalOverflow\":false},{\"viewport\":{\"width\":360,\"height\":800},\"touch\":true,\"pageErrors\":0,\"externalRequests\":0,\"horizontalOverflow\":false}],\"fileProtocol\":\"not tested; prior environment policy blocked file://\",\"realWindowsChromebook\":false}\n\n"
+        },
+        {
+          "id": "exhibit-independent-logic",
+          "command": [
+            "node",
+            "tests/day2-acceptance-logic.cjs",
+            "/workspace/work/engine-v1-live-runs/exhibit-mission/demo-20261018/candidate.html"
+          ],
+          "exit_code": 0,
+          "seconds": 1.82,
+          "status": "PASS",
+          "log": "/workspace/work/engine-v1-live-runs/exhibit-mission/demo-20261018/attempt-0-test-2.log",
+          "output": "{\"source\":\"/workspace/work/engine-v1-live-runs/exhibit-mission/demo-20261018/candidate.html\",\"sha256\":\"eda12943f6d148ef0ca6aa79fc89251835b61c8588841e811b3b33ded4b064e2\"}\n{\"pass\":true,\"samples\":2400,\"seed\":\"0x20261018\",\"solutionsCovered\":24,\"candidatesPerPuzzle\":24,\"allCluesEssential\":true,\"externalDependencies\":false}\n{\"finiteUniverse\":true,\"clueTypes\":32,\"allTriples\":4960,\"eligibleEssentialUniqueTriples\":168,\"solutionsCovered\":24}\n\n"
+        },
+        {
+          "id": "exhibit-full-browser",
+          "command": [
+            "node",
+            "tests/day2-acceptance-browser.cjs",
+            "/workspace/work/engine-v1-live-runs/exhibit-mission/demo-20261018/candidate.html"
+          ],
+          "exit_code": 1,
+          "seconds": 1.331,
+          "status": "FAIL",
+          "log": "/workspace/work/engine-v1-live-runs/exhibit-mission/demo-20261018/attempt-0-test-3.log",
+          "output": "{\"source\":\"/workspace/work/engine-v1-live-runs/exhibit-mission/demo-20261018/candidate.html\",\"sha256\":\"eda12943f6d148ef0ca6aa79fc89251835b61c8588841e811b3b33ded4b064e2\"}\n\nAssertionError [ERR_ASSERTION]: check button must fit desktop viewport\n    at assertDesktopFits (/workspace/work/mini-game-engine-v1-20261018/tests/day2-acceptance-browser.cjs:3:2615)\n    at async /workspace/work/mini-game-engine-v1-20261018/tests/day2-acceptance-browser.cjs:3:2853 {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: false,\n  expected: true,\n  operator: '==',\n  diff: 'simple'\n}\n"
+        }
+      ],
+      "status": "FAIL",
+      "ai_acknowledgement": {
+        "ready": true,
+        "ai_agent": "/root/child_view",
+        "summary": "3つの手がかりカードから対象作品を任意の枠線で強調。作品交換に追従し解除・切替・新問リセットを追加。文字と作品を対応させ相談を助ける仮説（実児童効果は未検証）。"
+      },
+      "candidate_sha256": "eda12943f6d148ef0ca6aa79fc89251835b61c8588841e811b3b33ded4b064e2"
+    },
+    {
+      "attempt": 1,
+      "tests": [
+        {
+          "id": "common-static",
+          "command": [
+            "node",
+            "/workspace/work/mini-game-engine-v1-20261018/engine-v1/tests/common-static.cjs",
+            "/workspace/work/engine-v1-live-runs/exhibit-mission/demo-20261018/candidate.html",
+            "/workspace/work/mini-game-engine-v1-20261018/engine-v1/games/exhibit-mission.json"
+          ],
+          "exit_code": 0,
+          "seconds": 0.035,
+          "status": "PASS",
+          "log": "/workspace/work/engine-v1-live-runs/exhibit-mission/demo-20261018/attempt-1-test-0.log",
+          "output": "{\"pass\":true,\"sourceSha256\":\"b26475b85175dcc89c0076169f15065963912f35ea994ede1e78dee83f7298fa\",\"inlineScripts\":1,\"utf8\":true,\"externalDependencies\":false,\"platform\":\"static Node\",\"fileProtocol\":\"not tested; prior environment policy blocked file://\"}\n\n"
+        },
+        {
+          "id": "common-browser",
+          "command": [
+            "node",
+            "/workspace/work/mini-game-engine-v1-20261018/engine-v1/tests/common-browser.cjs",
+            "/workspace/work/engine-v1-live-runs/exhibit-mission/demo-20261018/candidate.html",
+            "/workspace/work/mini-game-engine-v1-20261018/engine-v1/games/exhibit-mission.json"
+          ],
+          "exit_code": 0,
+          "seconds": 2.16,
+          "status": "PASS",
+          "log": "/workspace/work/engine-v1-live-runs/exhibit-mission/demo-20261018/attempt-1-test-1.log",
+          "output": "{\"pass\":true,\"sourceSha256\":\"b26475b85175dcc89c0076169f15065963912f35ea994ede1e78dee83f7298fa\",\"platform\":\"Linux Chromium HTTP loopback\",\"results\":[{\"viewport\":{\"width\":1366,\"height\":768},\"touch\":false,\"pageErrors\":0,\"externalRequests\":0,\"horizontalOverflow\":false},{\"viewport\":{\"width\":768,\"height\":1024},\"touch\":true,\"pageErrors\":0,\"externalRequests\":0,\"horizontalOverflow\":false},{\"viewport\":{\"width\":360,\"height\":800},\"touch\":true,\"pageErrors\":0,\"externalRequests\":0,\"horizontalOverflow\":false}],\"fileProtocol\":\"not tested; prior environment policy blocked file://\",\"realWindowsChromebook\":false}\n\n"
+        },
+        {
+          "id": "exhibit-independent-logic",
+          "command": [
+            "node",
+            "tests/day2-acceptance-logic.cjs",
+            "/workspace/work/engine-v1-live-runs/exhibit-mission/demo-20261018/candidate.html"
+          ],
+          "exit_code": 0,
+          "seconds": 1.78,
+          "status": "PASS",
+          "log": "/workspace/work/engine-v1-live-runs/exhibit-mission/demo-20261018/attempt-1-test-2.log",
+          "output": "{\"source\":\"/workspace/work/engine-v1-live-runs/exhibit-mission/demo-20261018/candidate.html\",\"sha256\":\"b26475b85175dcc89c0076169f15065963912f35ea994ede1e78dee83f7298fa\"}\n{\"pass\":true,\"samples\":2400,\"seed\":\"0x20261018\",\"solutionsCovered\":24,\"candidatesPerPuzzle\":24,\"allCluesEssential\":true,\"externalDependencies\":false}\n{\"finiteUniverse\":true,\"clueTypes\":32,\"allTriples\":4960,\"eligibleEssentialUniqueTriples\":168,\"solutionsCovered\":24}\n\n"
+        },
+        {
+          "id": "exhibit-full-browser",
+          "command": [
+            "node",
+            "tests/day2-acceptance-browser.cjs",
+            "/workspace/work/engine-v1-live-runs/exhibit-mission/demo-20261018/candidate.html"
+          ],
+          "exit_code": 0,
+          "seconds": 3.514,
+          "status": "PASS",
+          "log": "/workspace/work/engine-v1-live-runs/exhibit-mission/demo-20261018/attempt-1-test-3.log",
+          "output": "{\"source\":\"/workspace/work/engine-v1-live-runs/exhibit-mission/demo-20261018/candidate.html\",\"sha256\":\"b26475b85175dcc89c0076169f15065963912f35ea994ede1e78dee83f7298fa\"}\n{\"pass\":true,\"platform\":\"Linux Chromium via localhost HTTP\",\"roles\":[\"操作の目安：1番さん。担当は共同でも、交代・パスでも大丈夫。まず1枚に合うように並べる → 残り2枚も見る → 確かめる。「より左」は、となりでなくてもOKです。\",\"操作の目安：2番さん。担当は共同でも、交代・パスでも大丈夫。\",\"操作の目安：3番さん。担当は共同でも、交代・パスでも大丈夫。\"],\"errors\":[],\"external\":[],\"responsive\":[{\"viewport\":{\"width\":768,\"height\":1024},\"touch\":true,\"overflow\":false},{\"viewport\":{\"width\":360,\"height\":800},\"touch\":true,\"overflow\":false}],\"keyboard\":true,\"wrongAnswer\":true,\"hints\":true,\"pause\":true,\"reset\":true,\"replayChanges\":true,\"undoTested\":true}\n\n"
+        },
+        {
+          "id": "exhibit-highlight",
+          "command": [
+            "node",
+            "engine-v1/tests/improvement-specific.cjs",
+            "/workspace/work/engine-v1-live-runs/exhibit-mission/demo-20261018/candidate.html",
+            "exhibit-highlight"
+          ],
+          "exit_code": 0,
+          "seconds": 1.478,
+          "status": "PASS",
+          "log": "/workspace/work/engine-v1-live-runs/exhibit-mission/demo-20261018/attempt-1-test-4.log",
+          "output": "{\"pass\":true,\"sourceSha256\":\"b26475b85175dcc89c0076169f15065963912f35ea994ede1e78dee83f7298fa\",\"specific\":\"exhibit-highlight\"}\n\n"
+        }
+      ],
+      "status": "PASS",
+      "ai_acknowledgement": {
+        "ready": true,
+        "ai_agent": "/root/child_view",
+        "summary": "既存テストが検出した確認ボタン画面外の問題を修正。幅900px以上では手がかり本文と対象ボタンを横並びにし、48px以上の操作領域を保ちながら余白・作品表示を圧縮。狭幅・基本ルール・強調機能は維持し、テストは変更していない。"
+      },
+      "candidate_sha256": "b26475b85175dcc89c0076169f15065963912f35ea994ede1e78dee83f7298fa"
+    }
+  ],
+  "status": "LOCAL_PASS_AWAITING_GITHUB",
+  "github_status": "NOT_SENT_BY_ENGINE",
+  "game_id": "exhibit-mission",
+  "run_id": "demo-20261018",
+  "source": "experiments/exhibit-seven-days/day-02-final/game.html",
+  "source_sha256": "e1f0bee3775577894eac5d2591d7d0b89d01cb5df94676f7e95d4de8dafdbc8c",
+  "config_sha256": "ad3bf7a296ab7eb22f54ddc942496612129ceeb5ec6dab3532747b9f40edff92",
+  "work_directory": "/workspace/work/engine-v1-live-runs/exhibit-mission/demo-20261018",
+  "max_evaluations": 4,
+  "timeout_seconds": 3600,
+  "validated_sha256": "b26475b85175dcc89c0076169f15065963912f35ea994ede1e78dee83f7298fa",
+  "release_directory": "engine-v1/releases/exhibit-mission/demo-20261018",
+  "finished_utc": "2026-10-18T10:16:16.944178+00:00",
+  "protected_files": 47,
+  "source_and_history_unchanged": true,
+  "limitations": [
+    "Automated checks do not establish real-child usability.",
+    "AI identity is supplied by bridge, not cryptographically verified.",
+    "GitHub upload/main merge is a separate operation."
+  ]
+}

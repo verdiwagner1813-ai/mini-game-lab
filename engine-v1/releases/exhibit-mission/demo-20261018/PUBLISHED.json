@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "status": "GITHUB_PUBLISHED",
+  "game_id": "exhibit-mission",
+  "run_id": "demo-20261018",
+  "game_sha256": "b26475b85175dcc89c0076169f15065963912f35ea994ede1e78dee83f7298fa",
+  "report_sha256": "4ac58d49fbac054ed92f99120ff10be4065a5573af71d1e311735e4ef802522f",
+  "parent_main": "a98d11be652a05fa43b6b03523535ac8f2303d32",
+  "published_utc": "2026-10-18T10:16:17.659379+00:00",
+  "policy": "new files only; no force; release and receipt in one Git commit"
+}
