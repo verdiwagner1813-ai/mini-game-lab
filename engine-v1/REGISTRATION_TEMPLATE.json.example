@@ -1,0 +1,11 @@
+{
+  "id": "new-game-001",
+  "title": "作品名",
+  "source": "新しい原本パス/original.html",
+  "purpose": "作品で体験してほしいこと",
+  "target_age": "対象学年と人数",
+  "basic_rules": ["維持する基本ルール"],
+  "forbidden_changes": ["元版削除禁止", "個人情報・外部通信追加禁止"],
+  "browser_contract": {"start_selector": "#start", "action_selector": "#action"},
+  "specific_tests": [{"id": "new-game-specific", "command": ["node", "新しい固有テスト.cjs", "{candidate}"]}]
+}

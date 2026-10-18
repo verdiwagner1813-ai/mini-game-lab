@@ -1,0 +1,7 @@
+# Codexへの実行依頼
+
+指定した登録ゲームに対し、READMEとAGENTS.md/PROJECT_RULES.mdを読んで engine.py run --publish を起動する。既存接続・Node/Chromium/Playwrightを用い、追加課金/APIキー登録/定期登録はしない。
+
+AI_REQUESTが来たら、独立した企画/児童目線AIに複数の小改善候補を比較させ、開発AIにcandidateだけを編集させる。元ファイル・設定・テスト・エンジン・過去版は変更しない。候補の実装完了後、実際のAI担当名と改善理由を含むready JSONをstdinへ中継する。手で候補コードを差し替える固定パッチをAI判断と呼ばない。
+
+ATTEMPT_RESULTが不合格なら、エンジンからの失敗ログをAIへ渡す。最大3回の再修正はエンジンが制御する。重大な仕様変更しかできなければ停止して報告する。成功時はLOCAL_PASSとPUBLISH_RESULTを区別し、GitHubからPUBLISHED.jsonとHTMLを取得しハッシュを確認して完了とする。失敗候補をGitHubへ送らず、既存版は保持する。

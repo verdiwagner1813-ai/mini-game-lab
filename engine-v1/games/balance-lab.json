@@ -1,0 +1,41 @@
+{
+  "id": "balance-lab",
+  "title": "つりあいラボ（架空の実証用サンプル）",
+  "source": "engine-v1/samples/balance-lab/original.html",
+  "purpose": "3人で重りの合計を比べ、試して確かめながらつりあいを作る",
+  "target_age": "小学校4〜6年生・3人で1台。性別による好みの決めつけをしない",
+  "basic_rules": [
+    "1・2・3の重りを左右に配置して合計を合わせる",
+    "解ける3問、担当交代とヒント・パス",
+    "約5分の目安、勝敗や誤答罰なし"
+  ],
+  "forbidden_changes": [
+    "元版・過去完成版の編集削除",
+    "個人情報・通信・外部依存・ログイン・音点滅の追加",
+    "つりあいを作る教育目的の変更",
+    "テストや設定を変更して合格させること"
+  ],
+  "browser_contract": {
+    "start_selector": "#start",
+    "action_selector": "#weight-1-left"
+  },
+  "specific_tests": [
+    {
+      "id": "balance-independent-full",
+      "command": [
+        "node",
+        "engine-v1/tests/balance-specific.cjs",
+        "{candidate}"
+      ]
+    },
+    {
+      "id": "balance-placement",
+      "command": [
+        "node",
+        "engine-v1/tests/improvement-specific.cjs",
+        "{candidate}",
+        "balance-placement"
+      ]
+    }
+  ]
+}
