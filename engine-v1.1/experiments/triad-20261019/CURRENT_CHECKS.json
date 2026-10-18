@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "status": "PREPARED_NOT_REGISTERED_QUOTA_CONFIRMATION_PENDING",
+  "checkedAtJst": "2026-10-19T07:17:00+09:00",
+  "repository": "verdiwagner1813-ai/mini-game-lab",
+  "baselineCommit": "438eb2f8bb48e20f15cf4d0359b26c9ee2bf175b",
+  "githubRead": true,
+  "currentShell": true,
+  "currentNode": true,
+  "currentPython": true,
+  "currentChromiumPlaywrightHttp": true,
+  "browserViewports": [
+    "1366x768",
+    "768x1024",
+    "360x800"
+  ],
+  "browserErrors": 0,
+  "browserExternalRequests": 0,
+  "gameUnchanged": true,
+  "baselineGameSha256": "cd84365d2ccfa0213e92b8e7d4412f614b71741ea4666233472f4e1f9389a9b1",
+  "independentGateTests": {
+    "pass": true,
+    "checks": 18,
+    "agent": "/root/testing"
+  },
+  "schedulerDiscovery": {
+    "createToolAvailable": true,
+    "readExistingTasksSucceeded": true,
+    "activeTasksObserved": 3,
+    "previousSuccessfulOneShotObserved": true,
+    "newTasksCreated": 0,
+    "newTaskIds": []
+  },
+  "remainingUsageNumeric": null,
+  "usageReadToolAvailable": false,
+  "usageCostKnown": false,
+  "quotaHandlingQuestionPending": true,
+  "extraBillingConfigured": false,
+  "additionalApiKeysConfigured": false,
+  "coldRestartVerified": false,
+  "hardCloudTaskTerminationGuaranteed": false,
+  "existingFilesUnchangedBeforeAdditions": 78,
+  "notes": [
+    "Permission to perform three trials is explicit; numeric-quota precondition remains unresolved.",
+    "Do not interpret prepared prompts, gate tests, or prior success as new scheduled game execution.",
+    "Registration metadata must be saved separately after actual scheduler confirmation."
+  ]
+}
