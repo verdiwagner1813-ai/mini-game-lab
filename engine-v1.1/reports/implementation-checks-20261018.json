@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "status": "IMPLEMENTATION_TESTS_PASS_SCHEDULED_E2E_PENDING",
+  "codeCommit": "4128adec88b7f726d07c6e8fd140ab2b9d3c3691",
+  "baselineCommit": "0ef84bb656a5b846d8040cd730ccfd9b973ab104",
+  "newFilesOnly": true,
+  "existingFilesUnchanged": 55,
+  "tests": [
+    {
+      "name": "v1.1 continuity independent tests",
+      "pass": true,
+      "checks": 14,
+      "executedAfterResume": true
+    },
+    {
+      "name": "existing v1 engine regression",
+      "pass": true,
+      "checks": 7,
+      "executedBeforeInterruption": true,
+      "repeated": false
+    },
+    {
+      "name": "existing v1 publisher",
+      "pass": true,
+      "checks": 4,
+      "executedBeforeInterruption": true,
+      "repeated": false
+    },
+    {
+      "name": "current-environment Chromium HTTP baseline",
+      "pass": true,
+      "executedBeforeInterruption": true,
+      "viewports": [
+        "1366x768",
+        "768x1024",
+        "360x800"
+      ],
+      "pageErrors": 0,
+      "externalRequests": 0
+    }
+  ],
+  "independentReadOnlyReview": {
+    "agent": "/root/testing",
+    "completedAfterResume": true,
+    "materialCodeIssues": []
+  },
+  "scheduledEndToEndVerified": false,
+  "coldRestartVerified": false,
+  "threeRunExperimentEnabled": false,
+  "additionalApiKeysConfigured": false,
+  "extraBillingConfigured": false,
+  "usageCostKnown": false,
+  "notes": [
+    "Historical drafts preserved; START_HERE.md and experiment-plan-resumed.json supersede earlier three-run approval statements.",
+    "Scheduled invocation metadata is self-declared and must be corroborated with automation execution timestamp."
+  ]
+}
