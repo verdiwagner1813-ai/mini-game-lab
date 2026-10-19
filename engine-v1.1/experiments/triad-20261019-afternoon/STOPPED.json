@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "status": "BLOCKED",
+  "experimentId": "triad-20261019-afternoon",
+  "reasonCode": "EARLY_DISPATCH_OUTSIDE_AUTHORIZED_WINDOW",
+  "reason": "The scheduled invocation arrived before the second authorized time window. choose_slot.py returned BLOCKED. Instructions allow only a few seconds of early waiting, so no game execution or catch-up was started.",
+  "observedUtc": "2026-10-19T09:27:16Z",
+  "expectedUpcomingSlot": 2,
+  "expectedScheduledJst": "2026-10-19T18:30:00+09:00",
+  "earliestAuthorizedUtc": "2026-10-19T09:29:50Z",
+  "dispatcher": {
+    "status": "BLOCKED",
+    "reason": "Outside all authorized slot windows; do not catch up or create another schedule"
+  },
+  "slotIdentifiedByDispatcher": false,
+  "gameChangesMade": false,
+  "browserTestsExecutedThisInvocation": false,
+  "newGamePublished": false,
+  "lastGoodRunId": "triad-20261019-01",
+  "lastGoodGameSha256": "8eaef99bf1828b507f1608e8b85a1c2e433f16b762625e2607ea55f6d1c6da11",
+  "controller_task_id": "6ad5c2adec348191b8c36b41df86f457",
+  "pauseVerification": "Recorded separately after pause action",
+  "remainingAuthorizedSlotsStopped": [
+    2,
+    3
+  ],
+  "additionalApiKeysConfigured": false,
+  "extraBillingConfigured": false,
+  "usageCostKnown": false
+}
