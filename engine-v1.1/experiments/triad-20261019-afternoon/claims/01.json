@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "slot": 1,
+  "run_id": "triad-20261019-01",
+  "status": "CLAIMED_NOT_COMPLETED",
+  "scheduledJst": "2026-10-19T16:30:00+09:00",
+  "observedInvocationUtc": "2026-10-19T07:42:38Z",
+  "claimUtc": "2026-10-19T07:43:30Z",
+  "gate": "ELIGIBLE_NOT_EXECUTED",
+  "inputMainCommit": "4a9ab7549fc8f08457573266b9b39f9b7718e8e9",
+  "sourcePath": "engine-v1/releases/exhibit-mission/scheduled-v11-20261018-a/game.html",
+  "sourceSha256": "cd84365d2ccfa0213e92b8e7d4412f614b71741ea4666233472f4e1f9389a9b1",
+  "controller_task_id": "6ad5c2adec348191b8c36b41df86f457",
+  "extraBillingConfigured": false,
+  "additionalApiKeysConfigured": false
+}
