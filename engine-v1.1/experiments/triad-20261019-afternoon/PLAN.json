@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "experimentId": "triad-20261019-afternoon",
+  "repository": "verdiwagner1813-ai/mini-game-lab",
+  "branch": "main",
+  "gameId": "exhibit-mission",
+  "userApprovedThreeTrials": true,
+  "authorizationScope": "2026-10-19 JST 16:30,18:30,20:30 only; no later recurrence",
+  "supersedesApprovalGateOnly": "engine-v1.1/experiment-plan-resumed.json",
+  "registrationState": "AUTHORIZED_PREPARING_REGISTRATION",
+  "quotaNumericReadAvailable": false,
+  "usageCostKnown": false,
+  "quotaHandlingConfirmationPending": false,
+  "slots": [
+    {
+      "slot": 1,
+      "runId": "triad-20261019-01",
+      "scheduledJst": "2026-10-19T16:30:00+09:00"
+    },
+    {
+      "slot": 2,
+      "runId": "triad-20261019-02",
+      "scheduledJst": "2026-10-19T18:30:00+09:00"
+    },
+    {
+      "slot": 3,
+      "runId": "triad-20261019-03",
+      "scheduledJst": "2026-10-19T20:30:00+09:00"
+    }
+  ],
+  "method": "same Codex-thread cloud automation and live independent-AI bridge as verified one-shot",
+  "baselineSuccessfulRun": "scheduled-v11-20261018-a",
+  "baselineSha256": "cd84365d2ccfa0213e92b8e7d4412f614b71741ea4666233472f4e1f9389a9b1",
+  "executionBudgetSeconds": 3300,
+  "maxRepairAttempts": 3,
+  "hardCloudTerminationGuaranteed": false,
+  "additionalApiKeysAllowed": false,
+  "extraBillingAllowed": false,
+  "taskCount": 3,
+  "taskType": "three non-recurring one-shot tasks",
+  "stopConditions": [
+    "usage limit",
+    "auth/permission failure",
+    "missing shell or browser",
+    "prior run still running or unverified",
+    "duplicate claim",
+    "expired slot",
+    "STOPPED or COMPLETED marker"
+  ],
+  "comparisonAfterEach": "new snapshot only; never overwrite earlier reports",
+  "finalComparisonPath": "engine-v1.1/experiments/triad-20261019-afternoon/COMPARISON.md",
+  "userApprovedUnknownNumericQuota": true,
+  "supersedes": "engine-v1.1/experiments/triad-20261019/PLAN.json"
+}

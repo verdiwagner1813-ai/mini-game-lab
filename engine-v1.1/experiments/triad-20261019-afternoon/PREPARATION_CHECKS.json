@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "status": "SCHEDULE_ADAPTER_TESTS_PASS",
+  "reusedOriginalGate": "engine-v1.1/experiments/triad-20261019/gate.py",
+  "checks": 22,
+  "pass": true,
+  "newJapanTimes": [
+    "2026-10-19T16:30:00+09:00",
+    "2026-10-19T18:30:00+09:00",
+    "2026-10-19T20:30:00+09:00"
+  ],
+  "numericQuotaUnknownApproved": true,
+  "usageCostKnown": false,
+  "extraBillingConfigured": false,
+  "apiKeysConfigured": false,
+  "newGameExecutions": 0,
+  "note": "Tests use isolated fixtures and do not constitute game improvement or scheduled execution."
+}
