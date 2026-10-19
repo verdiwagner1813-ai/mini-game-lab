@@ -1,0 +1,15 @@
+これはユーザー承認済み「ミニゲーム自動改善エンジンv1.1」午後3回限定実験の一回分のCodexクラウド呼出しです。通知だけで終わらず、独立AIによる改善と既存エンジンによるChromium検証・GitHub新規保存まで実行してください。追加課金・APIキー登録・有料枠切替は禁止。既存契約の枠を超えたら停止してください。原本・過去完成版・既存コード/設定/記録を上書き・削除しないでください。
+
+固定リポジトリ verdiwagner1813-ai/mini-game-lab、main。現在の正本は engine-v1.1/experiments/triad-20261019-afternoon/REGISTRATION.json と SCHEDULING_ADAPTATION.md。PLAN/RUN_PROTOCOL/PROMPT内の「3単発タスク」は草案方式であり、実登録方式は「同じCodexタスクが2時間間隔・COUNT=3で呼ばれる」に置き換わりました。指定枠は2026-10-19 16:30/18:30/20:30 Asia/Tokyoだけです。朝の未登録計画を使わないでください。残量数値が取得不能でもこの3回を既存契約内で進めることは明示承認済みです。
+
+最初にGitHub接続でREGISTRATION.jsonとSTOPPED.json/COMPLETED.jsonの有無を確認し、環境statusがあれば呼びます。停止/完了済みならゲームを変更せず、REGISTRATIONのcontroller_task_idの残り呼出しをpauseして報告します。404と権限/通信エラーを混同しないでください。実行環境や認証が不足ならBLOCKED、追加契約等で回避しないでください。
+
+過去のローカル領域を仮定せず、新しい一時領域へmainをcloneし、AGENTS.md/PROJECT_RULES.mdと午後の実行規約を読みます。通常認証・プロキシ・CAを維持し、秘密値を記録しません。shell/Python/Node/既存Chromium/Playwright/GitHub書込みを確認します。
+
+`python engine-v1.1/experiments/triad-20261019-afternoon/choose_slot.py` を実行し、実際の現在時刻からslotを特定します。status=SLOT_IDENTIFIED_NOT_EXECUTED以外なら追い付き実行せずSTOPPEDにします。数秒早着の場合だけseconds_until_due分を短く待ちます。回数の残りやファイル名順でslotを推測せず、実時刻の枠で決定します。
+
+結果のpromptパス（PROMPT-01/02/03.md）を読み、その固定slot/run-idに対する全指示を実行します。午後gate.pyの前回完了・保存証跡・重複claim・時刻検査を必ず通し、slot2/3はそれぞれ直前の最新合格版を継承してください。claim既存なら同じ回を再実行しません。独立AIが複数案を比較・選び候補だけ編集し、新機能の追加操作検査後に既存v1.1へready応答を中継、既存テストと最大3回修正を再利用します。合格版だけ新規保存します。改善不要・不合格なら版を増やさず理由を記録します。
+
+実装・テスト・記録・保存を含め55分以内を目標とし、wrapperは残時間内の50分以下。クラウドランナー全体の強制終了は保証できません。利用上限・権限/環境障害・前回未完了ならSTOPPED.jsonを新規追加し、同controller_task_idをpauseします。pauseも不能なら正確に報告し、後続はSTOP/前回完了証拠のゲートで改善を拒否します。新しい予約、4回目、代替時刻の予約を作りません。
+
+各回results/NN.jsonと新しい比較snapshotを保存し、実測のstatus・改善理由・検査・継承SHA・commit・完成ゲームリンクを報告します。slot3終了時（または全体停止時）はCOMPARISON.mdで前回成功版と全3枠を比較し、未実行は未実行と記録します。slot3終了時COMPLETED.jsonを新規追加し、controller_task_idをpauseして終了します。COUNT=3と停止処理により以後の呼出しはありません。3枠終了と3作品合格は区別してください。
