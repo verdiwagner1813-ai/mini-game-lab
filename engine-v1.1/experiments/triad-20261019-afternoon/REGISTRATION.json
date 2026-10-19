@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "status": "REGISTERED_NOT_YET_EXECUTED",
+  "registeredAndReadbackUtc": "2026-10-19T07:14:57Z",
+  "repository": "verdiwagner1813-ai/mini-game-lab",
+  "branch": "main",
+  "experimentId": "triad-20261019-afternoon",
+  "gameId": "exhibit-mission",
+  "controller_task_id": "6ad5c2adec348191b8c36b41df86f457",
+  "tasks": [
+    {
+      "id": "6ad5c2adec348191b8c36b41df86f457",
+      "title": "v1.1 午後改善 第1回",
+      "is_enabled": true,
+      "schedule": "BEGIN:VEVENT\nDTSTART;TZID=Asia/Tokyo:20261019T163000\nRRULE:FREQ=HOURLY;INTERVAL=2;COUNT=3\nEND:VEVENT",
+      "timezone": "Asia/Tokyo",
+      "thread_id": "01a149dc-2bd8-73da-9f15-43635e7040b8",
+      "expectedOccurrences": 3,
+      "last_run_time": null
+    }
+  ],
+  "slots": [
+    {
+      "slot": 1,
+      "run_id": "triad-20261019-01",
+      "scheduledJst": "2026-10-19T16:30:00+09:00",
+      "scheduledUtc": "2026-10-19T07:30:00Z",
+      "taskId": "6ad5c2adec348191b8c36b41df86f457"
+    },
+    {
+      "slot": 2,
+      "run_id": "triad-20261019-02",
+      "scheduledJst": "2026-10-19T18:30:00+09:00",
+      "scheduledUtc": "2026-10-19T09:30:00Z",
+      "taskId": "6ad5c2adec348191b8c36b41df86f457"
+    },
+    {
+      "slot": 3,
+      "run_id": "triad-20261019-03",
+      "scheduledJst": "2026-10-19T20:30:00+09:00",
+      "scheduledUtc": "2026-10-19T11:30:00Z",
+      "taskId": "6ad5c2adec348191b8c36b41df86f457"
+    }
+  ],
+  "retired_setup_tasks": [
+    {
+      "id": "6ad5c2b7b5c48191b119d412972f05ae",
+      "title": "v1.1 午後改善 第2回",
+      "is_enabled": false,
+      "last_run_time": null,
+      "reason": "Merged into COUNT=3 controller before execution"
+    }
+  ],
+  "rejected_setup_attempt": {
+    "requested": "third separate one-shot",
+    "errorCode": "too_many_active_automations",
+    "message": "Current plan allows only 5 active scheduled tasks",
+    "taskCreated": false
+  },
+  "effectiveSchedulingMethod": "One Codex-thread cloud automation, FREQ=HOURLY;INTERVAL=2;COUNT=3; actual-time dispatch to fixed slots; supersedes three-one-shot draft in PLAN/RUN_PROTOCOL/PROMPT files",
+  "previousVerifiedCodexThreadId": "01a149dc-2bd8-73da-9f15-43635e7040b8",
+  "sameVerifiedThread": true,
+  "registeredEnvironmentId": "ccarenv_b64_Y2NhcmVudl9lYTM2ZmViYjExNDg4MTkxOWQzNDQ2MTkxZmE4YzdkMw",
+  "futureEnvironmentAvailabilityGuaranteed": false,
+  "coldRestartVerified": false,
+  "hardCloudTaskTerminationGuaranteed": false,
+  "sourceCodeCommit": "8c290c5",
+  "adapterGateTests": {
+    "pass": true,
+    "checks": 22
+  },
+  "dispatchTests": {
+    "pass": true,
+    "checks": 7
+  },
+  "independentReadOnlyReview": {
+    "agent": "/root/testing",
+    "pass": true
+  },
+  "userApprovedUnknownNumericQuota": true,
+  "usageCostKnown": false,
+  "numericUsageQuota": null,
+  "additionalApiKeysConfigured": false,
+  "extraBillingConfigured": false,
+  "otherExistingTasksChanged": false,
+  "stopConditions": [
+    "After three scheduled occurrences, no fourth occurrence",
+    "STOPPED or COMPLETED marker",
+    "Usage/auth/permission/environment error",
+    "Previous slot completion or GitHub proof missing",
+    "Duplicate claim or already-existing run",
+    "Delivery outside authorized one-hour window"
+  ],
+  "recordingAndComparison": {
+    "perRunResults": "engine-v1.1/experiments/triad-20261019-afternoon/results/NN.json",
+    "perRunReports": "engine-v1.1/reports/triad-20261019-afternoon-NN.html",
+    "finalComparison": "engine-v1.1/experiments/triad-20261019-afternoon/COMPARISON.md",
+    "finalCompletion": "engine-v1.1/experiments/triad-20261019-afternoon/COMPLETED.json"
+  },
+  "notes": [
+    "Registration is not evidence of successful future execution.",
+    "No games or past versions were modified during registration.",
+    "If usage exhaustion prevents pause tools, subsequent invocations must reject missing predecessor proof rather than improve a game.",
+    "COUNT limits scheduled occurrences; duplicate deliveries are additionally guarded by fixed claims."
+  ]
+}
