@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "status": "PAUSE_VERIFIED",
+  "controller_task_id": "6ad5c2adec348191b8c36b41df86f457",
+  "is_enabled": false,
+  "last_run_time": "2026-10-19T09:26:00.943466+00:00",
+  "verified_utc": "2026-10-19T09:29:15.578457+00:00",
+  "new_schedule_created": false,
+  "replacement_schedule_created": false,
+  "remaining_slot_3_cancelled": true,
+  "three_runs_all_completed": false
+}
