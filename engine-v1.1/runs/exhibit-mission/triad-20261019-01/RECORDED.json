@@ -1,0 +1,8 @@
+{
+  "status": "GITHUB_RECORDED",
+  "game_id": "exhibit-mission",
+  "run_id": "triad-20261019-01",
+  "record_sha256": "28cce1fab37ec4da4cbb638ef91e3c79bbee86265b837ec6411d06e7e9985694",
+  "parent_main": "b7f9c1cc0142bdf426cc340763cd7b8443390bf5",
+  "policy": "two new files only; no force; read-back verification"
+}

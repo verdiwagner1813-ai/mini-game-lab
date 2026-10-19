@@ -1,0 +1,132 @@
+{
+  "schema_version": "1.1",
+  "engine": "mini-game-continuity-wrapper",
+  "program_is_ai": false,
+  "game_id": "exhibit-mission",
+  "run_id": "triad-20261019-01",
+  "invocation": "scheduled",
+  "invocation_evidence": "Self-declared metadata only; match external schedule ID/time separately.",
+  "status": "PASS",
+  "github_status": "GITHUB_PUBLISHED",
+  "started_utc": "2026-10-19T07:43:47.847699+00:00",
+  "ai_decisions": [
+    {
+      "ready": true,
+      "summary": "説明追加・全配置消去・強調対象名の通知を比較し、既存の状態欄で強調対象名を知らせる改善を選定。指定候補だけ編集し、手がかり選択時に対象作品名、解除時に解除文を#statusへ通知する。指さし・読み上げでの相談参加を支援する仮説。既存undo・対象強調・取消フォーカス・推理・通信なしは維持。独立テスト担当の追加Chromium操作検査に合格し、状態不変とフォーカス回帰を確認。実児童効果は未確認。",
+      "ai_agent": "/root/child_view"
+    }
+  ],
+  "scope": "Automated checks; no real-child or Windows/Chromebook hardware verification.",
+  "work_directory": "/workspace/work/triad-afternoon-invocation.zesfwX/runs/continuity/exhibit-mission/triad-20261019-01",
+  "source": {
+    "kind": "release",
+    "path": "engine-v1/releases/exhibit-mission/scheduled-v11-20261018-a/game.html",
+    "release": "engine-v1/releases/exhibit-mission/scheduled-v11-20261018-a",
+    "sha256": "cd84365d2ccfa0213e92b8e7d4412f614b71741ea4666233472f4e1f9389a9b1",
+    "commit": "a859a28ac0a54072f9b2f11184512c9c2a141d32",
+    "config_sha256": "ad3bf7a296ab7eb22f54ddc942496612129ceeb5ec6dab3532747b9f40edff92",
+    "ref_commit": "8f8eaed2d856043e87ecd5add8e4a922999aa72b",
+    "game_id": "exhibit-mission"
+  },
+  "sandbox_seed": {
+    "source_path": "experiments/exhibit-seven-days/day-02-final/game.html",
+    "sha256": "cd84365d2ccfa0213e92b8e7d4412f614b71741ea4666233472f4e1f9389a9b1",
+    "config_unchanged": true,
+    "note": "Only isolated working-copy source bytes replaced; authoritative original is unchanged."
+  },
+  "v1_status": "LOCAL_PASS_AWAITING_GITHUB",
+  "attempts": [
+    {
+      "attempt": 0,
+      "tests": [
+        {
+          "id": "common-static",
+          "command": [
+            "node",
+            "/workspace/work/triad-afternoon-invocation.zesfwX/runs/continuity/exhibit-mission/triad-20261019-01/checkout/engine-v1/tests/common-static.cjs",
+            "/workspace/work/triad-afternoon-invocation.zesfwX/runs/continuity/exhibit-mission/triad-20261019-01/v1-work/exhibit-mission/triad-20261019-01/candidate.html",
+            "/workspace/work/triad-afternoon-invocation.zesfwX/runs/continuity/exhibit-mission/triad-20261019-01/checkout/engine-v1/games/exhibit-mission.json"
+          ],
+          "exit_code": 0,
+          "seconds": 0.06,
+          "status": "PASS",
+          "log": "/workspace/work/triad-afternoon-invocation.zesfwX/runs/continuity/exhibit-mission/triad-20261019-01/v1-work/exhibit-mission/triad-20261019-01/attempt-0-test-0.log",
+          "output": "{\"pass\":true,\"sourceSha256\":\"8eaef99bf1828b507f1608e8b85a1c2e433f16b762625e2607ea55f6d1c6da11\",\"inlineScripts\":1,\"utf8\":true,\"externalDependencies\":false,\"platform\":\"static Node\",\"fileProtocol\":\"not tested; prior environment policy blocked file://\"}\n\n"
+        },
+        {
+          "id": "common-browser",
+          "command": [
+            "node",
+            "/workspace/work/triad-afternoon-invocation.zesfwX/runs/continuity/exhibit-mission/triad-20261019-01/checkout/engine-v1/tests/common-browser.cjs",
+            "/workspace/work/triad-afternoon-invocation.zesfwX/runs/continuity/exhibit-mission/triad-20261019-01/v1-work/exhibit-mission/triad-20261019-01/candidate.html",
+            "/workspace/work/triad-afternoon-invocation.zesfwX/runs/continuity/exhibit-mission/triad-20261019-01/checkout/engine-v1/games/exhibit-mission.json"
+          ],
+          "exit_code": 0,
+          "seconds": 2.944,
+          "status": "PASS",
+          "log": "/workspace/work/triad-afternoon-invocation.zesfwX/runs/continuity/exhibit-mission/triad-20261019-01/v1-work/exhibit-mission/triad-20261019-01/attempt-0-test-1.log",
+          "output": "{\"pass\":true,\"sourceSha256\":\"8eaef99bf1828b507f1608e8b85a1c2e433f16b762625e2607ea55f6d1c6da11\",\"platform\":\"Linux Chromium HTTP loopback\",\"results\":[{\"viewport\":{\"width\":1366,\"height\":768},\"touch\":false,\"pageErrors\":0,\"externalRequests\":0,\"horizontalOverflow\":false},{\"viewport\":{\"width\":768,\"height\":1024},\"touch\":true,\"pageErrors\":0,\"externalRequests\":0,\"horizontalOverflow\":false},{\"viewport\":{\"width\":360,\"height\":800},\"touch\":true,\"pageErrors\":0,\"externalRequests\":0,\"horizontalOverflow\":false}],\"fileProtocol\":\"not tested; prior environment policy blocked file://\",\"realWindowsChromebook\":false}\n\n"
+        },
+        {
+          "id": "exhibit-independent-logic",
+          "command": [
+            "node",
+            "tests/day2-acceptance-logic.cjs",
+            "/workspace/work/triad-afternoon-invocation.zesfwX/runs/continuity/exhibit-mission/triad-20261019-01/v1-work/exhibit-mission/triad-20261019-01/candidate.html"
+          ],
+          "exit_code": 0,
+          "seconds": 2.093,
+          "status": "PASS",
+          "log": "/workspace/work/triad-afternoon-invocation.zesfwX/runs/continuity/exhibit-mission/triad-20261019-01/v1-work/exhibit-mission/triad-20261019-01/attempt-0-test-2.log",
+          "output": "{\"source\":\"/workspace/work/triad-afternoon-invocation.zesfwX/runs/continuity/exhibit-mission/triad-20261019-01/v1-work/exhibit-mission/triad-20261019-01/candidate.html\",\"sha256\":\"8eaef99bf1828b507f1608e8b85a1c2e433f16b762625e2607ea55f6d1c6da11\"}\n{\"pass\":true,\"samples\":2400,\"seed\":\"0x20261018\",\"solutionsCovered\":24,\"candidatesPerPuzzle\":24,\"allCluesEssential\":true,\"externalDependencies\":false}\n{\"finiteUniverse\":true,\"clueTypes\":32,\"allTriples\":4960,\"eligibleEssentialUniqueTriples\":168,\"solutionsCovered\":24}\n\n"
+        },
+        {
+          "id": "exhibit-full-browser",
+          "command": [
+            "node",
+            "tests/day2-acceptance-browser.cjs",
+            "/workspace/work/triad-afternoon-invocation.zesfwX/runs/continuity/exhibit-mission/triad-20261019-01/v1-work/exhibit-mission/triad-20261019-01/candidate.html"
+          ],
+          "exit_code": 0,
+          "seconds": 4.187,
+          "status": "PASS",
+          "log": "/workspace/work/triad-afternoon-invocation.zesfwX/runs/continuity/exhibit-mission/triad-20261019-01/v1-work/exhibit-mission/triad-20261019-01/attempt-0-test-3.log",
+          "output": "{\"source\":\"/workspace/work/triad-afternoon-invocation.zesfwX/runs/continuity/exhibit-mission/triad-20261019-01/v1-work/exhibit-mission/triad-20261019-01/candidate.html\",\"sha256\":\"8eaef99bf1828b507f1608e8b85a1c2e433f16b762625e2607ea55f6d1c6da11\"}\n{\"pass\":true,\"platform\":\"Linux Chromium via localhost HTTP\",\"roles\":[\"操作の目安：1番さん。担当は共同でも、交代・パスでも大丈夫。まず1枚に合うように並べる → 残り2枚も見る → 確かめる。「より左」は、となりでなくてもOKです。\",\"操作の目安：2番さん。担当は共同でも、交代・パスでも大丈夫。\",\"操作の目安：3番さん。担当は共同でも、交代・パスでも大丈夫。\"],\"errors\":[],\"external\":[],\"responsive\":[{\"viewport\":{\"width\":768,\"height\":1024},\"touch\":true,\"overflow\":false},{\"viewport\":{\"width\":360,\"height\":800},\"touch\":true,\"overflow\":false}],\"keyboard\":true,\"wrongAnswer\":true,\"hints\":true,\"pause\":true,\"reset\":true,\"replayChanges\":true,\"undoTested\":true}\n\n"
+        },
+        {
+          "id": "exhibit-highlight",
+          "command": [
+            "node",
+            "engine-v1/tests/improvement-specific.cjs",
+            "/workspace/work/triad-afternoon-invocation.zesfwX/runs/continuity/exhibit-mission/triad-20261019-01/v1-work/exhibit-mission/triad-20261019-01/candidate.html",
+            "exhibit-highlight"
+          ],
+          "exit_code": 0,
+          "seconds": 1.492,
+          "status": "PASS",
+          "log": "/workspace/work/triad-afternoon-invocation.zesfwX/runs/continuity/exhibit-mission/triad-20261019-01/v1-work/exhibit-mission/triad-20261019-01/attempt-0-test-4.log",
+          "output": "{\"pass\":true,\"sourceSha256\":\"8eaef99bf1828b507f1608e8b85a1c2e433f16b762625e2607ea55f6d1c6da11\",\"specific\":\"exhibit-highlight\"}\n\n"
+        }
+      ],
+      "status": "PASS",
+      "ai_acknowledgement": {
+        "ready": true,
+        "summary": "説明追加・全配置消去・強調対象名の通知を比較し、既存の状態欄で強調対象名を知らせる改善を選定。指定候補だけ編集し、手がかり選択時に対象作品名、解除時に解除文を#statusへ通知する。指さし・読み上げでの相談参加を支援する仮説。既存undo・対象強調・取消フォーカス・推理・通信なしは維持。独立テスト担当の追加Chromium操作検査に合格し、状態不変とフォーカス回帰を確認。実児童効果は未確認。",
+        "ai_agent": "/root/child_view"
+      },
+      "candidate_sha256": "8eaef99bf1828b507f1608e8b85a1c2e433f16b762625e2607ea55f6d1c6da11"
+    }
+  ],
+  "release_created": true,
+  "release": "engine-v1/releases/exhibit-mission/triad-20261019-01",
+  "validated_sha256": "8eaef99bf1828b507f1608e8b85a1c2e433f16b762625e2607ea55f6d1c6da11",
+  "local_status": "LOCAL_PASS_AWAITING_GITHUB",
+  "release_publication": {
+    "status": "GITHUB_PUBLISHED",
+    "commit": "b7f9c1cc0142bdf426cc340763cd7b8443390bf5",
+    "readback_verified": true,
+    "release": "engine-v1/releases/exhibit-mission/triad-20261019-01"
+  },
+  "finished_utc": "2026-10-19T07:46:29.128605+00:00",
+  "elapsed_seconds": 161.281
+}
