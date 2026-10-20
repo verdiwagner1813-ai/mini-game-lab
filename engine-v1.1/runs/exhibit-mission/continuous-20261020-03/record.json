@@ -1,0 +1,132 @@
+{
+  "schema_version": "1.1",
+  "engine": "mini-game-continuity-wrapper",
+  "program_is_ai": false,
+  "game_id": "exhibit-mission",
+  "run_id": "continuous-20261020-03",
+  "invocation": "interactive",
+  "invocation_evidence": "Self-declared metadata only; match external schedule ID/time separately.",
+  "status": "PASS",
+  "github_status": "GITHUB_PUBLISHED",
+  "started_utc": "2026-10-20T09:38:12.993251+00:00",
+  "ai_decisions": [
+    {
+      "ready": true,
+      "summary": "操作説明の長文化・全配置リセット・交換通知の具体化を比較し、相談中に変更を追いやすくする交換通知を選定。既存statusに実際交換した2作品名を追加し、配置変更・判定・undoは維持。独立追加Chromium検査で2作品名・2箇所だけの交換・undo復元を確認し、ヒントliveと対象バッジの回帰検査も合格。強調・対象通知・取消フォーカスを維持。児童効果と実スクリーンリーダーは未確認。",
+      "ai_agent": "/root/child_view"
+    }
+  ],
+  "scope": "Automated checks; no real-child or Windows/Chromebook hardware verification.",
+  "work_directory": "/workspace/work/v11-continuous-20261020.DoZ754/runs/continuity/exhibit-mission/continuous-20261020-03",
+  "source": {
+    "kind": "release",
+    "path": "engine-v1/releases/exhibit-mission/continuous-20261020-02/game.html",
+    "release": "engine-v1/releases/exhibit-mission/continuous-20261020-02",
+    "sha256": "da2abc022cc74e149dd8ac536eebb447df24b033ddfcf0799d40e0dd336e710b",
+    "commit": "bd40b8465a7c1f011c4a60c52b46ff2fe6c29e24",
+    "config_sha256": "ad3bf7a296ab7eb22f54ddc942496612129ceeb5ec6dab3532747b9f40edff92",
+    "ref_commit": "d2a64c65cb7da5d87bc5e355e1961b3dce19c038",
+    "game_id": "exhibit-mission"
+  },
+  "sandbox_seed": {
+    "source_path": "experiments/exhibit-seven-days/day-02-final/game.html",
+    "sha256": "da2abc022cc74e149dd8ac536eebb447df24b033ddfcf0799d40e0dd336e710b",
+    "config_unchanged": true,
+    "note": "Only isolated working-copy source bytes replaced; authoritative original is unchanged."
+  },
+  "v1_status": "LOCAL_PASS_AWAITING_GITHUB",
+  "attempts": [
+    {
+      "attempt": 0,
+      "tests": [
+        {
+          "id": "common-static",
+          "command": [
+            "node",
+            "/workspace/work/v11-continuous-20261020.DoZ754/runs/continuity/exhibit-mission/continuous-20261020-03/checkout/engine-v1/tests/common-static.cjs",
+            "/workspace/work/v11-continuous-20261020.DoZ754/runs/continuity/exhibit-mission/continuous-20261020-03/v1-work/exhibit-mission/continuous-20261020-03/candidate.html",
+            "/workspace/work/v11-continuous-20261020.DoZ754/runs/continuity/exhibit-mission/continuous-20261020-03/checkout/engine-v1/games/exhibit-mission.json"
+          ],
+          "exit_code": 0,
+          "seconds": 0.038,
+          "status": "PASS",
+          "log": "/workspace/work/v11-continuous-20261020.DoZ754/runs/continuity/exhibit-mission/continuous-20261020-03/v1-work/exhibit-mission/continuous-20261020-03/attempt-0-test-0.log",
+          "output": "{\"pass\":true,\"sourceSha256\":\"29cdd09a54a5b65bdeab6cbc5f2e4b0db5a67709931f02087bc884a8303f9ddc\",\"inlineScripts\":1,\"utf8\":true,\"externalDependencies\":false,\"platform\":\"static Node\",\"fileProtocol\":\"not tested; prior environment policy blocked file://\"}\n\n"
+        },
+        {
+          "id": "common-browser",
+          "command": [
+            "node",
+            "/workspace/work/v11-continuous-20261020.DoZ754/runs/continuity/exhibit-mission/continuous-20261020-03/checkout/engine-v1/tests/common-browser.cjs",
+            "/workspace/work/v11-continuous-20261020.DoZ754/runs/continuity/exhibit-mission/continuous-20261020-03/v1-work/exhibit-mission/continuous-20261020-03/candidate.html",
+            "/workspace/work/v11-continuous-20261020.DoZ754/runs/continuity/exhibit-mission/continuous-20261020-03/checkout/engine-v1/games/exhibit-mission.json"
+          ],
+          "exit_code": 0,
+          "seconds": 2.09,
+          "status": "PASS",
+          "log": "/workspace/work/v11-continuous-20261020.DoZ754/runs/continuity/exhibit-mission/continuous-20261020-03/v1-work/exhibit-mission/continuous-20261020-03/attempt-0-test-1.log",
+          "output": "{\"pass\":true,\"sourceSha256\":\"29cdd09a54a5b65bdeab6cbc5f2e4b0db5a67709931f02087bc884a8303f9ddc\",\"platform\":\"Linux Chromium HTTP loopback\",\"results\":[{\"viewport\":{\"width\":1366,\"height\":768},\"touch\":false,\"pageErrors\":0,\"externalRequests\":0,\"horizontalOverflow\":false},{\"viewport\":{\"width\":768,\"height\":1024},\"touch\":true,\"pageErrors\":0,\"externalRequests\":0,\"horizontalOverflow\":false},{\"viewport\":{\"width\":360,\"height\":800},\"touch\":true,\"pageErrors\":0,\"externalRequests\":0,\"horizontalOverflow\":false}],\"fileProtocol\":\"not tested; prior environment policy blocked file://\",\"realWindowsChromebook\":false}\n\n"
+        },
+        {
+          "id": "exhibit-independent-logic",
+          "command": [
+            "node",
+            "tests/day2-acceptance-logic.cjs",
+            "/workspace/work/v11-continuous-20261020.DoZ754/runs/continuity/exhibit-mission/continuous-20261020-03/v1-work/exhibit-mission/continuous-20261020-03/candidate.html"
+          ],
+          "exit_code": 0,
+          "seconds": 1.917,
+          "status": "PASS",
+          "log": "/workspace/work/v11-continuous-20261020.DoZ754/runs/continuity/exhibit-mission/continuous-20261020-03/v1-work/exhibit-mission/continuous-20261020-03/attempt-0-test-2.log",
+          "output": "{\"source\":\"/workspace/work/v11-continuous-20261020.DoZ754/runs/continuity/exhibit-mission/continuous-20261020-03/v1-work/exhibit-mission/continuous-20261020-03/candidate.html\",\"sha256\":\"29cdd09a54a5b65bdeab6cbc5f2e4b0db5a67709931f02087bc884a8303f9ddc\"}\n{\"pass\":true,\"samples\":2400,\"seed\":\"0x20261018\",\"solutionsCovered\":24,\"candidatesPerPuzzle\":24,\"allCluesEssential\":true,\"externalDependencies\":false}\n{\"finiteUniverse\":true,\"clueTypes\":32,\"allTriples\":4960,\"eligibleEssentialUniqueTriples\":168,\"solutionsCovered\":24}\n\n"
+        },
+        {
+          "id": "exhibit-full-browser",
+          "command": [
+            "node",
+            "tests/day2-acceptance-browser.cjs",
+            "/workspace/work/v11-continuous-20261020.DoZ754/runs/continuity/exhibit-mission/continuous-20261020-03/v1-work/exhibit-mission/continuous-20261020-03/candidate.html"
+          ],
+          "exit_code": 0,
+          "seconds": 3.741,
+          "status": "PASS",
+          "log": "/workspace/work/v11-continuous-20261020.DoZ754/runs/continuity/exhibit-mission/continuous-20261020-03/v1-work/exhibit-mission/continuous-20261020-03/attempt-0-test-3.log",
+          "output": "{\"source\":\"/workspace/work/v11-continuous-20261020.DoZ754/runs/continuity/exhibit-mission/continuous-20261020-03/v1-work/exhibit-mission/continuous-20261020-03/candidate.html\",\"sha256\":\"29cdd09a54a5b65bdeab6cbc5f2e4b0db5a67709931f02087bc884a8303f9ddc\"}\n{\"pass\":true,\"platform\":\"Linux Chromium via localhost HTTP\",\"roles\":[\"操作の目安：1番さん。担当は共同でも、交代・パスでも大丈夫。まず1枚に合うように並べる → 残り2枚も見る → 確かめる。「より左」は、となりでなくてもOKです。\",\"操作の目安：2番さん。担当は共同でも、交代・パスでも大丈夫。\",\"操作の目安：3番さん。担当は共同でも、交代・パスでも大丈夫。\"],\"errors\":[],\"external\":[],\"responsive\":[{\"viewport\":{\"width\":768,\"height\":1024},\"touch\":true,\"overflow\":false},{\"viewport\":{\"width\":360,\"height\":800},\"touch\":true,\"overflow\":false}],\"keyboard\":true,\"wrongAnswer\":true,\"hints\":true,\"pause\":true,\"reset\":true,\"replayChanges\":true,\"undoTested\":true}\n\n"
+        },
+        {
+          "id": "exhibit-highlight",
+          "command": [
+            "node",
+            "engine-v1/tests/improvement-specific.cjs",
+            "/workspace/work/v11-continuous-20261020.DoZ754/runs/continuity/exhibit-mission/continuous-20261020-03/v1-work/exhibit-mission/continuous-20261020-03/candidate.html",
+            "exhibit-highlight"
+          ],
+          "exit_code": 0,
+          "seconds": 1.434,
+          "status": "PASS",
+          "log": "/workspace/work/v11-continuous-20261020.DoZ754/runs/continuity/exhibit-mission/continuous-20261020-03/v1-work/exhibit-mission/continuous-20261020-03/attempt-0-test-4.log",
+          "output": "{\"pass\":true,\"sourceSha256\":\"29cdd09a54a5b65bdeab6cbc5f2e4b0db5a67709931f02087bc884a8303f9ddc\",\"specific\":\"exhibit-highlight\"}\n\n"
+        }
+      ],
+      "status": "PASS",
+      "ai_acknowledgement": {
+        "ready": true,
+        "summary": "操作説明の長文化・全配置リセット・交換通知の具体化を比較し、相談中に変更を追いやすくする交換通知を選定。既存statusに実際交換した2作品名を追加し、配置変更・判定・undoは維持。独立追加Chromium検査で2作品名・2箇所だけの交換・undo復元を確認し、ヒントliveと対象バッジの回帰検査も合格。強調・対象通知・取消フォーカスを維持。児童効果と実スクリーンリーダーは未確認。",
+        "ai_agent": "/root/child_view"
+      },
+      "candidate_sha256": "29cdd09a54a5b65bdeab6cbc5f2e4b0db5a67709931f02087bc884a8303f9ddc"
+    }
+  ],
+  "release_created": true,
+  "release": "engine-v1/releases/exhibit-mission/continuous-20261020-03",
+  "validated_sha256": "29cdd09a54a5b65bdeab6cbc5f2e4b0db5a67709931f02087bc884a8303f9ddc",
+  "local_status": "LOCAL_PASS_AWAITING_GITHUB",
+  "release_publication": {
+    "status": "GITHUB_PUBLISHED",
+    "commit": "0b6cc683b4a36d50a103800ae6c024708711a665",
+    "readback_verified": true,
+    "release": "engine-v1/releases/exhibit-mission/continuous-20261020-03"
+  },
+  "finished_utc": "2026-10-20T09:40:48.618895+00:00",
+  "elapsed_seconds": 155.626
+}
