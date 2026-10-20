@@ -1,0 +1,117 @@
+{
+  "engine": "mini-game-improvement-engine-v1",
+  "program_is_ai": false,
+  "ai_protocol": "Independent AI edits candidate; program runs checks only.",
+  "started_utc": "2026-10-20T09:35:06.937054+00:00",
+  "attempts": [
+    {
+      "attempt": 0,
+      "tests": [
+        {
+          "id": "common-static",
+          "command": [
+            "node",
+            "/workspace/work/v11-continuous-20261020.DoZ754/runs/continuity/exhibit-mission/continuous-20261020-02/checkout/engine-v1/tests/common-static.cjs",
+            "/workspace/work/v11-continuous-20261020.DoZ754/runs/continuity/exhibit-mission/continuous-20261020-02/v1-work/exhibit-mission/continuous-20261020-02/candidate.html",
+            "/workspace/work/v11-continuous-20261020.DoZ754/runs/continuity/exhibit-mission/continuous-20261020-02/checkout/engine-v1/games/exhibit-mission.json"
+          ],
+          "exit_code": 0,
+          "seconds": 0.056,
+          "status": "PASS",
+          "log": "/workspace/work/v11-continuous-20261020.DoZ754/runs/continuity/exhibit-mission/continuous-20261020-02/v1-work/exhibit-mission/continuous-20261020-02/attempt-0-test-0.log",
+          "output": "{\"pass\":true,\"sourceSha256\":\"da2abc022cc74e149dd8ac536eebb447df24b033ddfcf0799d40e0dd336e710b\",\"inlineScripts\":1,\"utf8\":true,\"externalDependencies\":false,\"platform\":\"static Node\",\"fileProtocol\":\"not tested; prior environment policy blocked file://\"}\n\n"
+        },
+        {
+          "id": "common-browser",
+          "command": [
+            "node",
+            "/workspace/work/v11-continuous-20261020.DoZ754/runs/continuity/exhibit-mission/continuous-20261020-02/checkout/engine-v1/tests/common-browser.cjs",
+            "/workspace/work/v11-continuous-20261020.DoZ754/runs/continuity/exhibit-mission/continuous-20261020-02/v1-work/exhibit-mission/continuous-20261020-02/candidate.html",
+            "/workspace/work/v11-continuous-20261020.DoZ754/runs/continuity/exhibit-mission/continuous-20261020-02/checkout/engine-v1/games/exhibit-mission.json"
+          ],
+          "exit_code": 0,
+          "seconds": 2.244,
+          "status": "PASS",
+          "log": "/workspace/work/v11-continuous-20261020.DoZ754/runs/continuity/exhibit-mission/continuous-20261020-02/v1-work/exhibit-mission/continuous-20261020-02/attempt-0-test-1.log",
+          "output": "{\"pass\":true,\"sourceSha256\":\"da2abc022cc74e149dd8ac536eebb447df24b033ddfcf0799d40e0dd336e710b\",\"platform\":\"Linux Chromium HTTP loopback\",\"results\":[{\"viewport\":{\"width\":1366,\"height\":768},\"touch\":false,\"pageErrors\":0,\"externalRequests\":0,\"horizontalOverflow\":false},{\"viewport\":{\"width\":768,\"height\":1024},\"touch\":true,\"pageErrors\":0,\"externalRequests\":0,\"horizontalOverflow\":false},{\"viewport\":{\"width\":360,\"height\":800},\"touch\":true,\"pageErrors\":0,\"externalRequests\":0,\"horizontalOverflow\":false}],\"fileProtocol\":\"not tested; prior environment policy blocked file://\",\"realWindowsChromebook\":false}\n\n"
+        },
+        {
+          "id": "exhibit-independent-logic",
+          "command": [
+            "node",
+            "tests/day2-acceptance-logic.cjs",
+            "/workspace/work/v11-continuous-20261020.DoZ754/runs/continuity/exhibit-mission/continuous-20261020-02/v1-work/exhibit-mission/continuous-20261020-02/candidate.html"
+          ],
+          "exit_code": 0,
+          "seconds": 2.025,
+          "status": "PASS",
+          "log": "/workspace/work/v11-continuous-20261020.DoZ754/runs/continuity/exhibit-mission/continuous-20261020-02/v1-work/exhibit-mission/continuous-20261020-02/attempt-0-test-2.log",
+          "output": "{\"source\":\"/workspace/work/v11-continuous-20261020.DoZ754/runs/continuity/exhibit-mission/continuous-20261020-02/v1-work/exhibit-mission/continuous-20261020-02/candidate.html\",\"sha256\":\"da2abc022cc74e149dd8ac536eebb447df24b033ddfcf0799d40e0dd336e710b\"}\n{\"pass\":true,\"samples\":2400,\"seed\":\"0x20261018\",\"solutionsCovered\":24,\"candidatesPerPuzzle\":24,\"allCluesEssential\":true,\"externalDependencies\":false}\n{\"finiteUniverse\":true,\"clueTypes\":32,\"allTriples\":4960,\"eligibleEssentialUniqueTriples\":168,\"solutionsCovered\":24}\n\n"
+        },
+        {
+          "id": "exhibit-full-browser",
+          "command": [
+            "node",
+            "tests/day2-acceptance-browser.cjs",
+            "/workspace/work/v11-continuous-20261020.DoZ754/runs/continuity/exhibit-mission/continuous-20261020-02/v1-work/exhibit-mission/continuous-20261020-02/candidate.html"
+          ],
+          "exit_code": 0,
+          "seconds": 3.968,
+          "status": "PASS",
+          "log": "/workspace/work/v11-continuous-20261020.DoZ754/runs/continuity/exhibit-mission/continuous-20261020-02/v1-work/exhibit-mission/continuous-20261020-02/attempt-0-test-3.log",
+          "output": "{\"source\":\"/workspace/work/v11-continuous-20261020.DoZ754/runs/continuity/exhibit-mission/continuous-20261020-02/v1-work/exhibit-mission/continuous-20261020-02/candidate.html\",\"sha256\":\"da2abc022cc74e149dd8ac536eebb447df24b033ddfcf0799d40e0dd336e710b\"}\n{\"pass\":true,\"platform\":\"Linux Chromium via localhost HTTP\",\"roles\":[\"操作の目安：1番さん。担当は共同でも、交代・パスでも大丈夫。まず1枚に合うように並べる → 残り2枚も見る → 確かめる。「より左」は、となりでなくてもOKです。\",\"操作の目安：2番さん。担当は共同でも、交代・パスでも大丈夫。\",\"操作の目安：3番さん。担当は共同でも、交代・パスでも大丈夫。\"],\"errors\":[],\"external\":[],\"responsive\":[{\"viewport\":{\"width\":768,\"height\":1024},\"touch\":true,\"overflow\":false},{\"viewport\":{\"width\":360,\"height\":800},\"touch\":true,\"overflow\":false}],\"keyboard\":true,\"wrongAnswer\":true,\"hints\":true,\"pause\":true,\"reset\":true,\"replayChanges\":true,\"undoTested\":true}\n\n"
+        },
+        {
+          "id": "exhibit-highlight",
+          "command": [
+            "node",
+            "engine-v1/tests/improvement-specific.cjs",
+            "/workspace/work/v11-continuous-20261020.DoZ754/runs/continuity/exhibit-mission/continuous-20261020-02/v1-work/exhibit-mission/continuous-20261020-02/candidate.html",
+            "exhibit-highlight"
+          ],
+          "exit_code": 0,
+          "seconds": 1.442,
+          "status": "PASS",
+          "log": "/workspace/work/v11-continuous-20261020.DoZ754/runs/continuity/exhibit-mission/continuous-20261020-02/v1-work/exhibit-mission/continuous-20261020-02/attempt-0-test-4.log",
+          "output": "{\"pass\":true,\"sourceSha256\":\"da2abc022cc74e149dd8ac536eebb447df24b033ddfcf0799d40e0dd336e710b\",\"specific\":\"exhibit-highlight\"}\n\n"
+        }
+      ],
+      "status": "PASS",
+      "ai_acknowledgement": {
+        "ready": true,
+        "summary": "ヒント移動ボタン・交換通知の具体化・対象の可視バッジを比較し、交換選択枠と手がかり対象枠を区別しやすくする『対象』バッジを選定。対象作品ボタン右上にaria-hiddenの小表示を追加しレイアウト高さは維持。独立追加Chromium検査で単体/2対象・交換追従・解除/改問リセット・状態保持、cycle1のヒント対応と既存フォーカス/通知の回帰を確認。児童効果は未確認。",
+        "ai_agent": "/root/child_view"
+      },
+      "candidate_sha256": "da2abc022cc74e149dd8ac536eebb447df24b033ddfcf0799d40e0dd336e710b"
+    }
+  ],
+  "status": "LOCAL_PASS_AWAITING_GITHUB",
+  "github_status": "NOT_SENT_BY_ENGINE",
+  "game_id": "exhibit-mission",
+  "run_id": "continuous-20261020-02",
+  "source": "experiments/exhibit-seven-days/day-02-final/game.html",
+  "source_sha256": "f04313b24476ed0aa57e720641851b5b4d5e43036d2e00eb6e82b3fcda90827f",
+  "config_sha256": "ad3bf7a296ab7eb22f54ddc942496612129ceeb5ec6dab3532747b9f40edff92",
+  "work_directory": "/workspace/work/v11-continuous-20261020.DoZ754/runs/continuity/exhibit-mission/continuous-20261020-02/v1-work/exhibit-mission/continuous-20261020-02",
+  "max_evaluations": 4,
+  "timeout_seconds": 899.026299889,
+  "validated_sha256": "da2abc022cc74e149dd8ac536eebb447df24b033ddfcf0799d40e0dd336e710b",
+  "release_directory": "engine-v1/releases/exhibit-mission/continuous-20261020-02",
+  "finished_utc": "2026-10-20T09:37:46.515756+00:00",
+  "protected_files": 123,
+  "source_and_history_unchanged": true,
+  "limitations": [
+    "Automated checks do not establish real-child usability.",
+    "AI identity is supplied by bridge, not cryptographically verified.",
+    "GitHub upload/main merge is a separate operation."
+  ],
+  "continuity": {
+    "wrapper_version": "1.1",
+    "source_kind": "release",
+    "source_path": "engine-v1/releases/exhibit-mission/continuous-20261020-01/game.html",
+    "source_sha256": "f04313b24476ed0aa57e720641851b5b4d5e43036d2e00eb6e82b3fcda90827f",
+    "source_ref_commit": "f3d41cb6fac13231c81bd5a3ab3b77dda9fae4fc",
+    "source_publication_commit": "b53a4fc9679f7a030068dc10c9a977674a512d92",
+    "config_unchanged": true
+  }
+}
