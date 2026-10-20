@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "cycle": 3,
+  "run_id": "continuous-20261020-03",
+  "status": "PASS",
+  "invocation": "interactive",
+  "mode": "one Codex execution, sequential cycles, no scheduling",
+  "improvement": "交換した2作品名の通知",
+  "ai_summary": "操作説明の長文化・全配置リセット・交換通知の具体化を比較し、相談中に変更を追いやすくする交換通知を選定。既存statusに実際交換した2作品名を追加し、配置変更・判定・undoは維持。独立追加Chromium検査で2作品名・2箇所だけの交換・undo復元を確認し、ヒントliveと対象バッジの回帰検査も合格。強調・対象通知・取消フォーカスを維持。児童効果と実スクリーンリーダーは未確認。",
+  "independent_agents": {
+    "selection_and_candidate_edit": "/root/child_view",
+    "additional_tests": "/root/testing"
+  },
+  "source": {
+    "kind": "release",
+    "path": "engine-v1/releases/exhibit-mission/continuous-20261020-02/game.html",
+    "release": "engine-v1/releases/exhibit-mission/continuous-20261020-02",
+    "sha256": "da2abc022cc74e149dd8ac536eebb447df24b033ddfcf0799d40e0dd336e710b",
+    "commit": "bd40b8465a7c1f011c4a60c52b46ff2fe6c29e24",
+    "config_sha256": "ad3bf7a296ab7eb22f54ddc942496612129ceeb5ec6dab3532747b9f40edff92",
+    "ref_commit": "d2a64c65cb7da5d87bc5e355e1961b3dce19c038",
+    "game_id": "exhibit-mission"
+  },
+  "sha256": "29cdd09a54a5b65bdeab6cbc5f2e4b0db5a67709931f02087bc884a8303f9ddc",
+  "started_utc": "2026-10-20T09:38:12.993251+00:00",
+  "finished_utc": "2026-10-20T09:40:48.618895+00:00",
+  "engine_elapsed_seconds": 155.626,
+  "max_repair_attempts": 3,
+  "repairs_used": 0,
+  "existing_checks": [
+    {
+      "id": "common-static",
+      "status": "PASS",
+      "exit_code": 0
+    },
+    {
+      "id": "common-browser",
+      "status": "PASS",
+      "exit_code": 0
+    },
+    {
+      "id": "exhibit-independent-logic",
+      "status": "PASS",
+      "exit_code": 0
+    },
+    {
+      "id": "exhibit-full-browser",
+      "status": "PASS",
+      "exit_code": 0
+    },
+    {
+      "id": "exhibit-highlight",
+      "status": "PASS",
+      "exit_code": 0
+    }
+  ],
+  "additional_browser": {
+    "pass": true,
+    "sourceSha256": "29cdd09a54a5b65bdeab6cbc5f2e4b0db5a67709931f02087bc884a8303f9ddc",
+    "artifact": "engine-v1.1/experiments/continuous-20261020/evidence/cycle-03-extra-result.json",
+    "script": "engine-v1.1/experiments/continuous-20261020/evidence/cycle-03-extra.cjs",
+    "cases": 4,
+    "platform": "Linux Chromium localhost HTTP",
+    "errors": [],
+    "external": [],
+    "candidateUnchanged": true
+  },
+  "regression_artifacts": [
+    {
+      "path": "engine-v1.1/experiments/continuous-20261020/evidence/cycle-03-badge-regression.json",
+      "pass": true,
+      "sha256": "ea0fe4df309fa6330c30e70d929b13972fac7b08a8a2a8177af7937aa2b70ca6"
+    },
+    {
+      "path": "engine-v1.1/experiments/continuous-20261020/evidence/cycle-03-hint-regression.json",
+      "pass": true,
+      "sha256": "850e7c20f049b5a9657d12851c874b2d628eea0eea8a62c3d0f088234a65b25e"
+    }
+  ],
+  "github_status": "GITHUB_PUBLISHED",
+  "game_commit": "0b6cc683b4a36d50a103800ae6c024708711a665",
+  "record_commit": "7f27f1b56f9d75bba270c1164db62b4a1667697e",
+  "game_readback_verified": true,
+  "zip_verified": true,
+  "record_receipt_verified": true,
+  "game_url": "https://github.com/verdiwagner1813-ai/mini-game-lab/blob/main/engine-v1/releases/exhibit-mission/continuous-20261020-03/game.html",
+  "html_download_url": "https://github.com/verdiwagner1813-ai/mini-game-lab/raw/refs/heads/main/engine-v1/releases/exhibit-mission/continuous-20261020-03/game.html",
+  "zip_download_url": "https://github.com/verdiwagner1813-ai/mini-game-lab/raw/refs/heads/main/engine-v1/releases/exhibit-mission/continuous-20261020-03/game.zip",
+  "core_run_record": "engine-v1.1/runs/exhibit-mission/continuous-20261020-03/record.json",
+  "additional_api_keys_configured": false,
+  "extra_billing_configured": false,
+  "public_settings_changed": false,
+  "usageCostKnown": false
+}

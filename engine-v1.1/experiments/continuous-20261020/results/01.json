@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "cycle": 1,
+  "run_id": "continuous-20261020-01",
+  "status": "PASS",
+  "invocation": "interactive",
+  "mode": "one Codex execution, sequential cycles, no scheduling",
+  "improvement": "ヒント本文の読み上げ用通知属性",
+  "ai_summary": "相談案内追加・対象の可視バッジ・ヒント本文の読み上げ対応を比較し、表示や推理を変えず情報へのアクセスを助ける読み上げ対応を選定。候補のhintBoxにrole=status、aria-live=polite、aria-atomic=true、hintにaria-controlsを追加。独立追加Chromium検査でヒント3段階・次問リセット・既存強調/対象通知/取消フォーカス維持を確認済み。実際の読み上げ品質と児童効果は未確認。",
+  "independent_agents": {
+    "selection_and_candidate_edit": "/root/child_view",
+    "additional_tests": "/root/testing"
+  },
+  "source": {
+    "kind": "release",
+    "path": "engine-v1/releases/exhibit-mission/triad-20261019-01/game.html",
+    "release": "engine-v1/releases/exhibit-mission/triad-20261019-01",
+    "sha256": "8eaef99bf1828b507f1608e8b85a1c2e433f16b762625e2607ea55f6d1c6da11",
+    "commit": "b7f9c1cc0142bdf426cc340763cd7b8443390bf5",
+    "config_sha256": "ad3bf7a296ab7eb22f54ddc942496612129ceeb5ec6dab3532747b9f40edff92",
+    "ref_commit": "6028c58e0c44aae698ce535db6cec14a6dd2251e",
+    "game_id": "exhibit-mission"
+  },
+  "sha256": "f04313b24476ed0aa57e720641851b5b4d5e43036d2e00eb6e82b3fcda90827f",
+  "started_utc": "2026-10-20T09:32:39.100346+00:00",
+  "finished_utc": "2026-10-20T09:34:41.928111+00:00",
+  "engine_elapsed_seconds": 122.828,
+  "max_repair_attempts": 3,
+  "repairs_used": 0,
+  "existing_checks": [
+    {
+      "id": "common-static",
+      "status": "PASS",
+      "exit_code": 0
+    },
+    {
+      "id": "common-browser",
+      "status": "PASS",
+      "exit_code": 0
+    },
+    {
+      "id": "exhibit-independent-logic",
+      "status": "PASS",
+      "exit_code": 0
+    },
+    {
+      "id": "exhibit-full-browser",
+      "status": "PASS",
+      "exit_code": 0
+    },
+    {
+      "id": "exhibit-highlight",
+      "status": "PASS",
+      "exit_code": 0
+    }
+  ],
+  "additional_browser": {
+    "pass": true,
+    "sourceSha256": "f04313b24476ed0aa57e720641851b5b4d5e43036d2e00eb6e82b3fcda90827f",
+    "artifact": "engine-v1.1/experiments/continuous-20261020/evidence/cycle-01-extra-result.json",
+    "script": "engine-v1.1/experiments/continuous-20261020/evidence/cycle-01-extra.cjs",
+    "cases": 2,
+    "platform": "Linux Chromium localhost HTTP",
+    "errors": [],
+    "external": [],
+    "candidateUnchanged": true
+  },
+  "regression_artifacts": [],
+  "github_status": "GITHUB_PUBLISHED",
+  "game_commit": "b53a4fc9679f7a030068dc10c9a977674a512d92",
+  "record_commit": "f3d41cb6fac13231c81bd5a3ab3b77dda9fae4fc",
+  "game_readback_verified": true,
+  "zip_verified": true,
+  "record_receipt_verified": true,
+  "game_url": "https://github.com/verdiwagner1813-ai/mini-game-lab/blob/main/engine-v1/releases/exhibit-mission/continuous-20261020-01/game.html",
+  "html_download_url": "https://github.com/verdiwagner1813-ai/mini-game-lab/raw/refs/heads/main/engine-v1/releases/exhibit-mission/continuous-20261020-01/game.html",
+  "zip_download_url": "https://github.com/verdiwagner1813-ai/mini-game-lab/raw/refs/heads/main/engine-v1/releases/exhibit-mission/continuous-20261020-01/game.zip",
+  "core_run_record": "engine-v1.1/runs/exhibit-mission/continuous-20261020-01/record.json",
+  "additional_api_keys_configured": false,
+  "extra_billing_configured": false,
+  "public_settings_changed": false,
+  "usageCostKnown": false
+}

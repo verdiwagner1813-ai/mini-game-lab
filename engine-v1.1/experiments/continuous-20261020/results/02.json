@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "cycle": 2,
+  "run_id": "continuous-20261020-02",
+  "status": "PASS",
+  "invocation": "interactive",
+  "mode": "one Codex execution, sequential cycles, no scheduling",
+  "improvement": "手がかり対象の可視バッジ",
+  "ai_summary": "ヒント移動ボタン・交換通知の具体化・対象の可視バッジを比較し、交換選択枠と手がかり対象枠を区別しやすくする『対象』バッジを選定。対象作品ボタン右上にaria-hiddenの小表示を追加しレイアウト高さは維持。独立追加Chromium検査で単体/2対象・交換追従・解除/改問リセット・状態保持、cycle1のヒント対応と既存フォーカス/通知の回帰を確認。児童効果は未確認。",
+  "independent_agents": {
+    "selection_and_candidate_edit": "/root/child_view",
+    "additional_tests": "/root/testing"
+  },
+  "source": {
+    "kind": "release",
+    "path": "engine-v1/releases/exhibit-mission/continuous-20261020-01/game.html",
+    "release": "engine-v1/releases/exhibit-mission/continuous-20261020-01",
+    "sha256": "f04313b24476ed0aa57e720641851b5b4d5e43036d2e00eb6e82b3fcda90827f",
+    "commit": "b53a4fc9679f7a030068dc10c9a977674a512d92",
+    "config_sha256": "ad3bf7a296ab7eb22f54ddc942496612129ceeb5ec6dab3532747b9f40edff92",
+    "ref_commit": "f3d41cb6fac13231c81bd5a3ab3b77dda9fae4fc",
+    "game_id": "exhibit-mission"
+  },
+  "sha256": "da2abc022cc74e149dd8ac536eebb447df24b033ddfcf0799d40e0dd336e710b",
+  "started_utc": "2026-10-20T09:35:05.923480+00:00",
+  "finished_utc": "2026-10-20T09:37:50.019930+00:00",
+  "engine_elapsed_seconds": 164.096,
+  "max_repair_attempts": 3,
+  "repairs_used": 0,
+  "existing_checks": [
+    {
+      "id": "common-static",
+      "status": "PASS",
+      "exit_code": 0
+    },
+    {
+      "id": "common-browser",
+      "status": "PASS",
+      "exit_code": 0
+    },
+    {
+      "id": "exhibit-independent-logic",
+      "status": "PASS",
+      "exit_code": 0
+    },
+    {
+      "id": "exhibit-full-browser",
+      "status": "PASS",
+      "exit_code": 0
+    },
+    {
+      "id": "exhibit-highlight",
+      "status": "PASS",
+      "exit_code": 0
+    }
+  ],
+  "additional_browser": {
+    "pass": true,
+    "sourceSha256": "da2abc022cc74e149dd8ac536eebb447df24b033ddfcf0799d40e0dd336e710b",
+    "artifact": "engine-v1.1/experiments/continuous-20261020/evidence/cycle-02-extra-result.json",
+    "script": "engine-v1.1/experiments/continuous-20261020/evidence/cycle-02-extra.cjs",
+    "cases": 2,
+    "platform": "Linux Chromium localhost HTTP",
+    "errors": [],
+    "external": [],
+    "candidateUnchanged": true
+  },
+  "regression_artifacts": [
+    {
+      "path": "engine-v1.1/experiments/continuous-20261020/evidence/cycle-02-hint-regression.json",
+      "pass": true,
+      "sha256": "b484fcf61ec89087233ac9b49f96a687af36ea54df30c5b5c7bcbf3afb263a84"
+    }
+  ],
+  "github_status": "GITHUB_PUBLISHED",
+  "game_commit": "bd40b8465a7c1f011c4a60c52b46ff2fe6c29e24",
+  "record_commit": "d2a64c65cb7da5d87bc5e355e1961b3dce19c038",
+  "game_readback_verified": true,
+  "zip_verified": true,
+  "record_receipt_verified": true,
+  "game_url": "https://github.com/verdiwagner1813-ai/mini-game-lab/blob/main/engine-v1/releases/exhibit-mission/continuous-20261020-02/game.html",
+  "html_download_url": "https://github.com/verdiwagner1813-ai/mini-game-lab/raw/refs/heads/main/engine-v1/releases/exhibit-mission/continuous-20261020-02/game.html",
+  "zip_download_url": "https://github.com/verdiwagner1813-ai/mini-game-lab/raw/refs/heads/main/engine-v1/releases/exhibit-mission/continuous-20261020-02/game.zip",
+  "core_run_record": "engine-v1.1/runs/exhibit-mission/continuous-20261020-02/record.json",
+  "additional_api_keys_configured": false,
+  "extra_billing_configured": false,
+  "public_settings_changed": false,
+  "usageCostKnown": false,
+  "additional_test_harness_note": "新規補助テストで交換後も対象名通知を保持すると誤って期待したため、既存の交換操作通知との違いを明確化して再実行。候補ゲームと登録済みテストの変更なし。"
+}

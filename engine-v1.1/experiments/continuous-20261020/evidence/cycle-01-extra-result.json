@@ -1,0 +1,33 @@
+{
+  "pass": true,
+  "sourceSha256": "f04313b24476ed0aa57e720641851b5b4d5e43036d2e00eb6e82b3fcda90827f",
+  "platform": "Linux Chromium localhost HTTP",
+  "results": [
+    {
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "attributes": true,
+      "hints123": true,
+      "hint2PlacementAndUndoReset": true,
+      "newRoundReset": true,
+      "previousFeaturesPreserved": true
+    },
+    {
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "attributes": true,
+      "hints123": true,
+      "hint2PlacementAndUndoReset": true,
+      "newRoundReset": true,
+      "previousFeaturesPreserved": true
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "candidateUnchanged": true,
+  "actualScreenReader": false
+}

@@ -1,0 +1,60 @@
+{
+  "pass": true,
+  "sourceSha256": "29cdd09a54a5b65bdeab6cbc5f2e4b0db5a67709931f02087bc884a8303f9ddc",
+  "platform": "Linux Chromium localhost HTTP",
+  "results": [
+    {
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "mode": "click",
+      "swapAnnouncement": "2つの作品を入れ替えました。四角 ↔ 三角。相談してから、条件を確かめよう。",
+      "exactTwoNames": true,
+      "onlyTwoPositionsChanged": true,
+      "undoRestored": true,
+      "badgeAndActiveCluePreserved": true
+    },
+    {
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "mode": "keyboard",
+      "swapAnnouncement": "2つの作品を入れ替えました。四角 ↔ 三角。相談してから、条件を確かめよう。",
+      "exactTwoNames": true,
+      "onlyTwoPositionsChanged": true,
+      "undoRestored": true,
+      "badgeAndActiveCluePreserved": true
+    },
+    {
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "mode": "click",
+      "swapAnnouncement": "2つの作品を入れ替えました。ひし形 ↔ 四角。相談してから、条件を確かめよう。",
+      "exactTwoNames": true,
+      "onlyTwoPositionsChanged": true,
+      "undoRestored": true,
+      "badgeAndActiveCluePreserved": true
+    },
+    {
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "mode": "keyboard",
+      "swapAnnouncement": "2つの作品を入れ替えました。ひし形 ↔ 四角。相談してから、条件を確かめよう。",
+      "exactTwoNames": true,
+      "onlyTwoPositionsChanged": true,
+      "undoRestored": true,
+      "badgeAndActiveCluePreserved": true
+    }
+  ],
+  "cancelDoesNotAnnounceSwap": true,
+  "hintLivePreserved": true,
+  "errors": [],
+  "external": [],
+  "candidateUnchanged": true
+}

@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "experimentId": "continuous-20261020",
+  "repository": "verdiwagner1813-ai/mini-game-lab",
+  "branch": "main",
+  "gameId": "exhibit-mission",
+  "mode": "three sequential improvement cycles within one live Codex execution",
+  "engineReuse": [
+    "engine-v1.1/continuity.py",
+    "engine-v1/engine.py",
+    "engine-v1/publish.py"
+  ],
+  "baseCommit": "6028c58e0c44aae698ce535db6cec14a6dd2251e",
+  "initialSource": "engine-v1/releases/exhibit-mission/triad-20261019-01/game.html",
+  "initialSha256": "8eaef99bf1828b507f1608e8b85a1c2e433f16b762625e2607ea55f6d1c6da11",
+  "cycles": 3,
+  "differentImprovementsRequired": true,
+  "maxRepairAttemptsPerCycle": 3,
+  "stopIfAnyCycleFails": true,
+  "savePolicy": "new files only; no overwrites/deletions",
+  "schedulesCreated": 0,
+  "schedulesChanged": 0,
+  "additionalApiKeysConfigured": false,
+  "extraBillingConfigured": false,
+  "publicSettingsChanged": false
+}
