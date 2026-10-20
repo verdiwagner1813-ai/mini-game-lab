@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "gameId": "crown-star-catch",
+  "invocation": "interactive",
+  "cycles": 3,
+  "runIds": [
+    "crown-continuous-20261021-01",
+    "crown-continuous-20261021-02",
+    "crown-continuous-20261021-03"
+  ],
+  "sourcePolicy": "latest verified pass; first from validated public registration source",
+  "maxRepairAttemptsPerCycle": 3,
+  "stopOnFailure": true,
+  "scheduleCreated": false,
+  "additionalApiKeysConfigured": false,
+  "extraBillingConfigured": false,
+  "publicSettingsChanged": false,
+  "usageCostKnown": false,
+  "createdUtc": "2026-10-20T21:49:32.807336+00:00"
+}

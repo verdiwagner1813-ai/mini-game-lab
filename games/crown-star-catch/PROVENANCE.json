@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "gameId": "crown-star-catch",
+  "date": "2026-10-21",
+  "uploadedFilename": "crown_star_chromebook_v1.html",
+  "uploadedSha256": "13984e01dfa08bca9c64f2ecffb434b3760110c33f371855dc3f9092a2c36036",
+  "uploadedHtmlPublished": false,
+  "portraitPermission": "unconfirmed",
+  "publicIllustration": "original inline SVG of crown and stars, no portrait",
+  "registrationAdaptations": [
+    "replace embedded portrait and related copy with generic inline SVG",
+    "add start panel required by existing common browser contract"
+  ],
+  "audioChanges": false,
+  "gameRuleChanges": false,
+  "rulePrecedence": "Current user explicitly requests 2-player competition; it supersedes repository defaults for 3-player cooperative games. Existing shared rules are retained unchanged.",
+  "baselineMain": "0a0d6e798dbfe96610f4d8e1938f622249862af7"
+}

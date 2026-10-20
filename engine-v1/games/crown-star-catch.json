@@ -1,0 +1,46 @@
+{
+  "id": "crown-star-catch",
+  "title": "王冠スターキャッチ",
+  "source": "games/crown-star-catch/original-public.html",
+  "purpose": "滑走の止まり方を予想し、相手の動きも考えながら王冠を中央へ運ぶ2人用の思考対戦ゲーム",
+  "basic_rules": [
+    "5×5の盤面、赤と青それぞれ5個のコマ",
+    "各チームの王冠コマは毎回5個からランダムに1個決める",
+    "上下左右に滑り、他のコマか盤面端の直前まで止まれない",
+    "王冠コマが中央の星マスに止まったチームのみ勝利",
+    "2人交代対戦、動けない側は自動パス、1手もどす",
+    "BGMと移動効果音を保持し、ON/OFFを維持する",
+    "Chromebook Chrome、単一HTML、オフライン操作を維持"
+  ],
+  "forbidden_changes": [
+    "原本・過去完成版・他ゲーム・既存記録の編集や削除",
+    "基本ルール・盤面・個数・勝利条件・2人対戦の変更",
+    "公開許可未確認の児童の似顔絵・個人情報の公開",
+    "外部通信・ログイン・保存API・外部依存・課金・APIキーの追加",
+    "テスト・設定・エンジンを変更して候補を合格させること",
+    "BGM・効果音の削除、音を優先課題にした改変"
+  ],
+  "browser_contract": {
+    "start_selector": "#startBtn",
+    "action_selector": "[data-piece=\"R1\"]"
+  },
+  "specific_tests": [
+    {
+      "id": "crown-independent-logic",
+      "command": [
+        "node",
+        "engine-v1/tests/crown/logic.cjs",
+        "{candidate}"
+      ]
+    },
+    {
+      "id": "crown-full-browser",
+      "command": [
+        "node",
+        "engine-v1/tests/crown/browser.cjs",
+        "{candidate}"
+      ]
+    }
+  ],
+  "target_age": "小学校4〜6年生を想定・2人で1台。性別による好みの決めつけをしない"
+}

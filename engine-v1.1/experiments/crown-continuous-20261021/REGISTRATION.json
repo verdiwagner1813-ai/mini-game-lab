@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "gameId": "crown-star-catch",
+  "source": "games/crown-star-catch/original-public.html",
+  "publicSourceSha256": "d37f1e0f677ce2f41f31f6593a1cba86e243ddd80868a969a7d3aca953449b7a",
+  "originalTestedInChromium": true,
+  "publicSourceTestedInChromium": true,
+  "registeredChecks": [
+    "common-static",
+    "common-browser",
+    "crown-independent-logic",
+    "crown-full-browser"
+  ],
+  "logic": {
+    "layouts": 250,
+    "slideComparisons": 10000,
+    "behaviorChecks": 1761,
+    "audioSectionsUnchanged": true
+  },
+  "browser": {
+    "viewports": 3,
+    "realEngine": "Linux Chromium localhost HTTP",
+    "keyboardMouseTouchEmulation": true,
+    "victoryUndoReplay": true,
+    "audioToggles": true,
+    "errors": [],
+    "externalRequests": []
+  },
+  "portraitPermission": "unconfirmed; portrait excluded from all Git additions",
+  "independentReview": "/root/crown_registration_review: only public-material/start-interface changes; rules and audio identical",
+  "testAuthor": "/root/crown_testing",
+  "testDevelopmentCorrections": [
+    "Normalize VM cross-realm objects before assertions",
+    "Undo restores selection; do not double-toggle it before replaying victory"
+  ],
+  "testSensitivity": "Four isolated mutated copies rejected: premature stop, ordinary-piece win, disabled undo, fixed crown",
+  "gameCandidateRepairs": 0,
+  "currentUserRulesOverride": "2-player crown game overrides shared 3-person cooperative default for this registration only",
+  "unverified": [
+    "School Chromebook/Windows hardware",
+    "physical touch",
+    "human listening",
+    "real screen reader",
+    "file://",
+    "HTTPS deployment",
+    "children playtest",
+    "automatic pass via real UI (covered in logic VM)"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "pass": true,
+  "cases": [
+    {
+      "mutation": "early-stop",
+      "rejected": true,
+      "exitCode": 1
+    },
+    {
+      "mutation": "non-crown-wins",
+      "rejected": true,
+      "exitCode": 1
+    },
+    {
+      "mutation": "no-undo",
+      "rejected": true,
+      "exitCode": 1
+    },
+    {
+      "mutation": "fixed-crown",
+      "rejected": true,
+      "exitCode": 1
+    }
+  ],
+  "productionGameEdited": false
+}

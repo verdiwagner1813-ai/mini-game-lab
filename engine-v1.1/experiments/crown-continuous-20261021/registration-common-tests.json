@@ -1,0 +1,50 @@
+{
+  "status": "PASS",
+  "source": "games/crown-star-catch/original-public.html",
+  "sourceSha256": "d37f1e0f677ce2f41f31f6593a1cba86e243ddd80868a969a7d3aca953449b7a",
+  "tests": [
+    {
+      "id": "common-static",
+      "pass": true,
+      "inlineScripts": 1,
+      "utf8": true,
+      "externalDependencies": false
+    },
+    {
+      "id": "common-browser",
+      "pass": true,
+      "platform": "Linux Chromium localhost HTTP",
+      "viewports": [
+        {
+          "width": 1366,
+          "height": 768,
+          "touch": false
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "touch": true
+        },
+        {
+          "width": 360,
+          "height": 800,
+          "touch": true
+        }
+      ],
+      "pageErrors": 0,
+      "externalRequests": 0,
+      "horizontalOverflow": false
+    }
+  ],
+  "evidenceNote": "Recorded from actual completed common test commands; source hash equals their stdout hash",
+  "unverified": [
+    "school Chromebook hardware",
+    "Windows hardware",
+    "physical touch",
+    "file://",
+    "HTTPS deployment",
+    "screen reader",
+    "human audio listening",
+    "children playtest"
+  ]
+}

@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>王冠スターキャッチ | Chromebook</title>
+<style>
+:root{font-family:system-ui,-apple-system,"Hiragino Sans","Noto Sans JP",sans-serif;color-scheme:light}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;background:linear-gradient(160deg,#eef7ff,#fff7e3 60%,#f7f0ff);color:#20324a}
+main{max-width:980px;margin:0 auto;padding:16px}
+h1{margin:4px 0 8px;font-size:clamp(28px,5vw,42px)}
+.lead{margin:0 0 14px;color:#4f6176}
+.panel{background:#fff;border:1px solid #d8e3ef;border-radius:22px;padding:16px;box-shadow:0 12px 35px rgba(28,55,90,.08);margin-bottom:14px}
+.top{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.badge{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:#f4f8fc;border:1px solid #d7e2ec;font-weight:800}
+.redDot,.blueDot{width:15px;height:15px;border-radius:50%;display:inline-block}
+.redDot{background:#dc4d4d} .blueDot{background:#3478e5}
+.game{display:flex;gap:20px;align-items:flex-start;flex-wrap:wrap}
+.boardWrap{flex:1 1 520px;min-width:270px}
+#board{display:block;width:100%;height:auto;touch-action:manipulation;background:linear-gradient(#fbfdff,#f6fbff);border-radius:20px;border:1px solid #dce7f4}
+.cell{fill:#fff9ef;stroke:#d4b678;stroke-width:1.6}
+.cell.alt{fill:#fff2d7}
+.centerCell{fill:#ffe082}
+.gridLine{stroke:#d8c7a4;stroke-width:1.2}
+.star{fill:#ffb100;stroke:#fff;stroke-width:2}
+.piece{cursor:pointer;stroke:#fff;stroke-width:3;filter:drop-shadow(0 3px 3px rgba(0,0,0,.18))}
+.piece.red{fill:#dc4d4d} .piece.blue{fill:#3478e5}
+.piece.crowned{stroke:#ffd24f;stroke-width:5}
+.piece.selected{stroke:#111d2d;stroke-width:5}
+.moveHint{fill:rgba(47,112,237,.18);stroke:#2f70ed;stroke-width:3;stroke-dasharray:6 5;cursor:pointer}
+button{font:inherit;border:0;border-radius:14px;background:#245d97;color:white;padding:12px 14px;font-weight:800;cursor:pointer}
+button.secondary{background:#edf3f9;color:#244864} button.sound{background:#1e806a} button.sound[aria-pressed="true"]{background:#0f5c4b}
+button:disabled{background:#c6d1db;color:#627181;cursor:not-allowed}
+.controls{flex:0 0 240px;display:grid;gap:12px}
+.dpad{display:grid;grid-template-columns:repeat(3,58px);justify-content:center;gap:8px}
+.dpad button{min-height:54px;font-size:26px;padding:0}
+.dpad .up{grid-column:2} .dpad .left{grid-column:1;grid-row:2} .dpad .right{grid-column:3;grid-row:2} .dpad .down{grid-column:2;grid-row:3}
+.buttons{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+#status{font-size:clamp(18px,2.8vw,24px);font-weight:900;line-height:1.5;min-height:3em;margin-top:8px}
+.info{display:grid;gap:10px}
+.card{background:#f8fbff;border:1px solid #dce7f2;border-radius:16px;padding:12px}
+.card h2{font-size:18px;margin:0 0 8px}
+.card p,.card li{margin:6px 0;line-height:1.7}
+.key{display:inline-block;padding:1px 7px;border-radius:7px;border:1px solid #c6d3e0;background:#fff}
+.teamLine{font-weight:800}
+#modal{position:fixed;inset:0;background:rgba(18,32,52,.64);display:none;align-items:center;justify-content:center;padding:16px;z-index:10}
+#modal.show{display:flex}
+.modalCard{background:#fff;border-radius:24px;max-width:620px;width:min(100%,620px);padding:18px;box-shadow:0 14px 40px rgba(0,0,0,.25);text-align:center}
+#victoryArt{width:min(100%,360px);border-radius:18px;border:5px solid #b3d9ff;background:#dff2ff}
+.modalTitle{font-size:clamp(24px,5vw,36px);margin:10px 0 6px}
+.modalText{line-height:1.7;color:#45576d}
+.footerNote{margin-top:6px;font-size:13px;color:#5a6b80}
+@media (max-width:760px){.controls{flex:1 1 100%} .buttons{justify-content:stretch} .buttons button{flex:1 1 40%}}
+</style></head><body><main>
+<section class="panel">
+<div class="top"><div><h1>👑 王冠スターキャッチ</h1><p class="lead">5×5の盤面で、ランダムに選ばれた王冠コマを中央の星マスに止めたら勝ち！ Chromebook・タッチ・キーボード対応。</p></div><div class="badge">🎵 レトロ冒険風オリジナルBGM</div></div>
+</section>
+<section class="panel" id="startPanel"><h2>2人で王冠を中央へ</h2><p>あか・あおの担当を決めて、交代でコマを滑らせよう。王冠は開始時にそれぞれ1個、ランダムに選ばれます。</p><button id="startBtn">ゲームをはじめる</button></section>
+<section class="panel game" id="gamePanel" hidden>
+<div class="boardWrap"><svg id="board" viewBox="0 0 600 600" aria-label="王冠スターキャッチの盤面"></svg><div id="status" aria-live="polite"></div></div>
+<div class="controls">
+<div class="card"><h2>操作</h2><div class="dpad"><button class="up" data-dir="up">↑</button><button class="left" data-dir="left">←</button><button class="right" data-dir="right">→</button><button class="down" data-dir="down">↓</button></div><p class="footerNote">コマを選んでから矢印、または移動先をタップします。</p></div>
+<div class="buttons"><button id="undoBtn" class="secondary">1手もどす</button><button id="resetBtn" class="secondary">もう一度</button><button id="musicBtn" class="sound" aria-pressed="false">♫ BGM OFF</button><button id="sfxBtn" class="sound" aria-pressed="true">♪ 効果音 ON</button></div>
+<div class="card info"><div class="teamLine"><span class="redDot"></span> あかチームの王冠：<span id="redCrownLabel"></span></div><div class="teamLine"><span class="blueDot"></span> あおチームの王冠：<span id="blueCrownLabel"></span></div><p>王冠コマは毎回ランダムに決まります。王冠マークの付いた自分のコマを、中央の<span class="key">★</span>マスに止めれば勝ちです。</p></div>
+</div>
+</section>
+<section class="panel card"><h2>ルール</h2><ul><li>5×5の盤面で、あか5個・あお5個のコマを使います。</li><li>コマは <strong>上下左右にまっすぐ</strong> 動き、ほかのコマか盤面の端にぶつかる直前まで止まりません。</li><li>各チームの5個のうち、<strong>1個が王冠コマ</strong> です。王冠コマだけが勝利条件を満たします。</li><li>今の手番で動かせるコマが1つもないときは、自動でパスします。</li><li>勝敗が決まると、王冠と星の記念イラストが表示されます。</li></ul></section>
+</main>
+<div id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modalCard"><svg id="victoryArt" viewBox="0 0 360 240" role="img" aria-label="王冠と星の記念イラスト"><rect width="360" height="240" rx="18" fill="#e5f5ff"/><circle cx="180" cy="120" r="83" fill="#fff5ce"/><path d="M104 143 91 83 141 110 180 65 219 110 269 83 256 143Z" fill="#ffd24f" stroke="#8b6316" stroke-width="5" stroke-linejoin="round"/><rect x="104" y="145" width="152" height="23" rx="7" fill="#f4b636" stroke="#8b6316" stroke-width="4"/><path d="m47 40 5 13 14 1-11 9 3 14-11-8-12 8 4-14-11-9 14-1Z M309 166l5 13 14 1-11 9 3 14-11-8-12 8 4-14-11-9 14-1Z" fill="#e7b736"/></svg><div id="modalTitle" class="modalTitle"></div><p id="modalText" class="modalText"></p><div class="buttons" style="margin-top:14px"><button id="playAgainBtn">もう一度遊ぶ</button><button id="closeBtn" class="secondary">とじる</button></div></div></div>
+<script>
+(() => {
+'use strict';
+const board=document.getElementById('board');
+const statusEl=document.getElementById('status');
+const redCrownLabel=document.getElementById('redCrownLabel');
+const blueCrownLabel=document.getElementById('blueCrownLabel');
+const undoBtn=document.getElementById('undoBtn');
+const resetBtn=document.getElementById('resetBtn');
+const musicBtn=document.getElementById('musicBtn');
+const sfxBtn=document.getElementById('sfxBtn');
+const modal=document.getElementById('modal');
+const modalTitle=document.getElementById('modalTitle');
+const modalText=document.getElementById('modalText');
+const playAgainBtn=document.getElementById('playAgainBtn');
+const closeBtn=document.getElementById('closeBtn');
+const dirs={up:[0,-1],down:[0,1],left:[-1,0],right:[1,0]};
+const cellSize=100, margin=50, center={x:2,y:2};
+const basePieces=[];
+for(let r=0;r<5;r++){ basePieces.push({id:'R'+(r+1),team:'red',x:0,y:r}); basePieces.push({id:'B'+(r+1),team:'blue',x:4,y:r}); }
+let state, history=[], selectedId=null, gameOver=false, audioStarted=false, musicOn=false, sfxOn=true;
+let audioCtx=null, musicTimer=null, musicStep=0;
+const fantasyTheme=[
+  {note:'D4',dur:1},{note:'F4',dur:1},{note:'A4',dur:2},{note:'G4',dur:1},{note:'F4',dur:1},{note:'E4',dur:2},
+  {note:'D4',dur:1},{note:'A3',dur:1},{note:'D4',dur:2},{note:'F4',dur:1},{note:'E4',dur:1},{note:'D4',dur:2},
+  {note:'G4',dur:1},{note:'A4',dur:1},{note:'Bb4',dur:2},{note:'A4',dur:1},{note:'G4',dur:1},{note:'F4',dur:2},
+  {note:'E4',dur:1},{note:'F4',dur:1},{note:'G4',dur:2},{note:'D4',dur:1},{note:'A3',dur:1},{note:'D4',dur:2}
+];
+const bassLine=['D3','D3','Bb2','C3','D3','A2','Bb2','A2'];
+function clonePieces(pieces){ return pieces.map(p=>({...p})); }
+function randomCrown(prefix){ return prefix + String(Math.floor(Math.random()*5)+1); }
+function initGame(){
+  state={pieces:clonePieces(basePieces),turn:'red',redCrown:randomCrown('R'),blueCrown:randomCrown('B')};
+  history=[]; selectedId=null; gameOver=false; hideModal(); refreshLabels(); render(); ensureTurnHasMove(true); render();
+}
+function refreshLabels(){ redCrownLabel.textContent=state.redCrown; blueCrownLabel.textContent=state.blueCrown; }
+function occupiedMap(){ const m=new Map(); state.pieces.forEach(p=>m.set(p.x+','+p.y,p)); return m; }
+function findPiece(id){ return state.pieces.find(p=>p.id===id); }
+function crownForTeam(team){ return team==='red' ? state.redCrown : state.blueCrown; }
+function isCrown(piece){ return piece.id===crownForTeam(piece.team); }
+function slideDestination(piece,dirName){
+  const [dx,dy]=dirs[dirName]; let x=piece.x, y=piece.y; const occ=occupiedMap();
+  while(true){ const nx=x+dx, ny=y+dy; if(nx<0||nx>4||ny<0||ny>4) break; if(occ.has(nx+','+ny)) break; x=nx; y=ny; }
+  return (x===piece.x && y===piece.y) ? null : {x,y};
+}
+function legalMoves(piece){ const out=[]; for(const dirName of Object.keys(dirs)){ const d=slideDestination(piece,dirName); if(d) out.push({dir:dirName,...d}); } return out; }
+function anyMoves(team){ return state.pieces.some(p=>p.team===team && legalMoves(p).length); }
+function saveHistory(){ history.push({state:JSON.stringify(state), selectedId}); if(history.length>80) history.shift(); }
+function movePiece(id, dirName, destOverride=null){
+  if(gameOver) return false;
+  const piece=findPiece(id); if(!piece || piece.team!==state.turn) return false;
+  const legal=legalMoves(piece);
+  const move=destOverride ? legal.find(m=>m.x===destOverride.x&&m.y===destOverride.y) : legal.find(m=>m.dir===dirName);
+  if(!move) return false;
+  saveHistory();
+  piece.x=move.x; piece.y=move.y; selectedId=id; playMoveSfx();
+  if(isCrown(piece) && piece.x===center.x && piece.y===center.y){ gameOver=true; render(); showVictory(piece.team, piece.id); playVictoryJingle(); return true; }
+  state.turn = state.turn==='red' ? 'blue' : 'red';
+  selectedId=null;
+  ensureTurnHasMove(false);
+  render();
+  return true;
+}
+function ensureTurnHasMove(initial){
+  let passes=0;
+  while(!gameOver && !anyMoves(state.turn) && passes<2){
+    const blocked=state.turn;
+    state.turn = blocked==='red' ? 'blue' : 'red';
+    passes++;
+    if(!initial) playPassSfx();
+    if(anyMoves(state.turn)){ statusEl.dataset.passMsg=(blocked==='red'?'あか':'あお')+'チームは動けないのでパス！'; return; }
+  }
+  if(passes>=2 && !gameOver){ gameOver=true; statusEl.dataset.passMsg='両チームとも動けないので引き分けです。'; showDraw(); }
+}
+function render(){
+  board.innerHTML='';
+  for(let y=0;y<5;y++) for(let x=0;x<5;x++){
+    const gx=margin+x*cellSize, gy=margin+y*cellSize;
+    const rect=svg('rect',{x:gx,y:gy,width:cellSize,height:cellSize,rx:12,class:'cell '+(((x+y)%2)?'alt':'')+(x===2&&y===2?' centerCell':'')});
+    board.append(rect);
+    if(x===2&&y===2) board.append(makeStar(gx+cellSize/2, gy+cellSize/2, 24));
+  }
+  for(let i=0;i<=5;i++){
+    const p=margin+i*cellSize;
+    board.append(svg('line',{x1:margin,y1:p,x2:margin+5*cellSize,y2:p,class:'gridLine'}));
+    board.append(svg('line',{x1:p,y1:margin,x2:p,y2:margin+5*cellSize,class:'gridLine'}));
+  }
+  if(selectedId && !gameOver){
+    const piece=findPiece(selectedId);
+    if(piece && piece.team===state.turn){
+      legalMoves(piece).forEach(m=>{
+        const x=margin+m.x*cellSize+10, y=margin+m.y*cellSize+10;
+        board.append(svg('rect',{x,y,width:80,height:80,rx:16,class:'moveHint','data-move-for':piece.id,'data-x':m.x,'data-y':m.y}));
+      });
+    }
+  }
+  state.pieces.forEach(piece=>{
+    const cx=margin+piece.x*cellSize+cellSize/2, cy=margin+piece.y*cellSize+cellSize/2;
+    const g=svg('g',{role:'button',tabindex:'0','data-piece':piece.id,'aria-label':piece.id+(piece.team==='red'?' あか':' あお')+(isCrown(piece)?' 王冠コマ':'')});
+    g.append(svg('circle',{cx,cy,r:31,class:'piece '+piece.team+(isCrown(piece)?' crowned':'')+(selectedId===piece.id?' selected':'')}));
+    g.append(svg('text',{x:cx,y:cy+9,'text-anchor':'middle','font-size':'22','font-weight':'900',fill:'#fff'}, piece.team==='red'?'赤':'青'));
+    if(isCrown(piece)) g.append(drawCrown(cx,cy-40));
+    board.append(g);
+  });
+  updateStatus();
+  undoBtn.disabled=!history.length;
+  [...board.querySelectorAll('[data-piece]')].forEach(el=>{
+    el.addEventListener('click',()=>onPiece(el.dataset.piece));
+    el.addEventListener('keydown',e=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); onPiece(el.dataset.piece); } });
+  });
+  [...board.querySelectorAll('.moveHint')].forEach(el=> el.addEventListener('click',()=>movePiece(el.dataset.moveFor,null,{x:+el.dataset.x,y:+el.dataset.y})));
+}
+function onPiece(id){ if(gameOver) return; const piece=findPiece(id); if(!piece || piece.team!==state.turn) return; selectedId=(selectedId===id?null:id); render(); }
+function updateStatus(){
+  let msg='';
+  if(gameOver) msg=statusEl.dataset.passMsg || 'ゲーム終了！';
+  else {
+    const teamName=state.turn==='red'?'あか':'あお';
+    const crownId=crownForTeam(state.turn);
+    msg=`${teamName}チームの番です。王冠コマは「${crownId}」。中央の★マスを目指そう！`;
+    if(statusEl.dataset.passMsg) msg=statusEl.dataset.passMsg+' '+msg;
+  }
+  statusEl.textContent=msg;
+  statusEl.dataset.passMsg='';
+}
+function showVictory(team,id){ modalTitle.textContent=(team==='red'?'あか':'あお')+'チームの勝ち！'; modalText.textContent='王冠コマ「'+id+'」が中央の星マスに止まりました。王冠と星のイラストといっしょに勝利！'; modal.classList.add('show'); }
+function showDraw(){ modalTitle.textContent='ひきわけ！'; modalText.textContent='両チームとも動けなくなりました。もう一度挑戦してみよう！'; modal.classList.add('show'); }
+function hideModal(){ modal.classList.remove('show'); }
+function undo(){ if(!history.length) return; const prev=history.pop(); state=JSON.parse(prev.state); selectedId=prev.selectedId; gameOver=false; hideModal(); render(); }
+function svg(name,attrs,text=''){ const el=document.createElementNS('http://www.w3.org/2000/svg',name); for(const [k,v] of Object.entries(attrs||{})) el.setAttribute(k,v); if(text) el.textContent=text; return el; }
+function makeStar(cx,cy,r){ const pts=[]; for(let i=0;i<10;i++){ const a=-Math.PI/2+i*Math.PI/5; const rr=i%2===0?r:r*0.45; pts.push((cx+Math.cos(a)*rr)+','+(cy+Math.sin(a)*rr)); } return svg('polygon',{points:pts.join(' '),class:'star'}); }
+function drawCrown(cx,cy){ const g=svg('g',{}); g.append(svg('path',{d:`M ${cx-20} ${cy+10} L ${cx-14} ${cy-8} L ${cx-2} ${cy+2} L ${cx+8} ${cy-12} L ${cx+18} ${cy+10} Z`,fill:'#ffd54a',stroke:'#8e6418','stroke-width':'2','stroke-linejoin':'round'})); g.append(svg('circle',{cx:cx-14,cy:cy-8,r:3,fill:'#fffbcc'})); g.append(svg('circle',{cx:cx+8,cy:cy-12,r:3,fill:'#fffbcc'})); return g; }
+function noteFreq(note){ const map={C:0,D:2,E:4,F:5,G:7,A:9,B:11}; const m=note.match(/^([A-G])([b#]?)(\d)$/); if(!m) return 440; let [,n,acc,oct]=m; let sem=map[n]+(acc==='#'?1:acc==='b'?-1:0); const midi=(+oct+1)*12+sem; return 440*Math.pow(2,(midi-69)/12); }
+function ensureAudio(){ if(audioCtx) return; audioCtx=new (window.AudioContext||window.webkitAudioContext)(); }
+function envOsc(freq,type,start,duration,gainVal){ const osc=audioCtx.createOscillator(); const gain=audioCtx.createGain(); osc.type=type; osc.frequency.setValueAtTime(freq,start); gain.gain.setValueAtTime(0,start); gain.gain.linearRampToValueAtTime(gainVal,start+0.02); gain.gain.exponentialRampToValueAtTime(0.0001,start+duration); osc.connect(gain).connect(audioCtx.destination); osc.start(start); osc.stop(start+duration+0.05); }
+function playThemeStep(){ if(!musicOn || !audioCtx) return; const beat=0.22; const now=audioCtx.currentTime+0.03; const idx=musicStep % fantasyTheme.length; const item=fantasyTheme[idx]; envOsc(noteFreq(item.note),'square',now,beat*item.dur*0.95,0.035); const bass=bassLine[Math.floor((musicStep/3)%bassLine.length)]; envOsc(noteFreq(bass),'triangle',now,beat*item.dur*1.1,0.025); musicStep=(musicStep+1)%fantasyTheme.length; musicTimer=setTimeout(playThemeStep, beat*item.dur*1000); }
+function toggleMusic(force=null){ ensureAudio(); if(audioCtx.state==='suspended') audioCtx.resume(); musicOn = force===null ? !musicOn : force; musicBtn.setAttribute('aria-pressed', String(musicOn)); musicBtn.textContent=musicOn?'♫ BGM ON':'♫ BGM OFF'; if(musicTimer){ clearTimeout(musicTimer); musicTimer=null; } if(musicOn) playThemeStep(); }
+function playMoveSfx(){ if(!sfxOn) return; ensureAudio(); if(audioCtx.state==='suspended') audioCtx.resume(); const now=audioCtx.currentTime; envOsc(noteFreq('D5'),'square',now,0.11,0.05); envOsc(noteFreq('A5'),'triangle',now+0.05,0.12,0.035); }
+function playPassSfx(){ if(!sfxOn) return; ensureAudio(); const now=audioCtx.currentTime; envOsc(noteFreq('C4'),'sawtooth',now,0.16,0.03); envOsc(noteFreq('A3'),'triangle',now+0.06,0.18,0.025); }
+function playVictoryJingle(){ if(!sfxOn) return; ensureAudio(); const seq=['D5','F5','A5','D6']; let t=audioCtx.currentTime; seq.forEach(n=>{ envOsc(noteFreq(n),'square',t,0.18,0.05); envOsc(noteFreq(n),'triangle',t,0.22,0.03); t+=0.13; }); }
+function toggleSfx(){ sfxOn=!sfxOn; sfxBtn.setAttribute('aria-pressed', String(sfxOn)); sfxBtn.textContent=sfxOn?'♪ 効果音 ON':'♪ 効果音 OFF'; }
+board.addEventListener('click',()=>{ if(!audioStarted){ ensureAudio(); if(audioCtx.state==='suspended') audioCtx.resume(); audioStarted=true; } },{once:true});
+window.addEventListener('keydown',e=>{ if(['ArrowUp','ArrowDown','ArrowLeft','ArrowRight'].includes(e.key) && selectedId && !gameOver){ e.preventDefault(); const map={ArrowUp:'up',ArrowDown:'down',ArrowLeft:'left',ArrowRight:'right'}; movePiece(selectedId,map[e.key]); } });
+[...document.querySelectorAll('.dpad button')].forEach(btn=>btn.addEventListener('click',()=>{ if(selectedId) movePiece(selectedId,btn.dataset.dir); }));
+undoBtn.addEventListener('click',undo); resetBtn.addEventListener('click',initGame); musicBtn.addEventListener('click',()=>toggleMusic()); sfxBtn.addEventListener('click',toggleSfx); playAgainBtn.addEventListener('click',()=>{ hideModal(); initGame(); }); closeBtn.addEventListener('click',hideModal); modal.addEventListener('click',e=>{ if(e.target===modal) hideModal(); });
+document.getElementById('startBtn').addEventListener('click',()=>{ document.getElementById('startPanel').hidden=true; document.getElementById('gamePanel').hidden=false; board.querySelector('[data-piece]').focus(); });
+initGame();
+})();
+</script></body></html>
